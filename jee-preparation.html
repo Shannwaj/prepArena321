@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JEE Mains & Advanced Preparation - PrepArena</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav-container">
+            <div class="logo">PrepArena</div>
+            <div class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#features">Features</a></li>
+                <li><a href="index.html#courses">Courses</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+                <li><a href="#" class="btn-primary">Sign In</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="jee-preparation-page">
+        <section class="page-hero">
+            <div class="hero-content">
+                <h1>JEE Mains & Advanced Preparation</h1>
+                <p>Comprehensive study materials and practice questions for JEE preparation</p>
+            </div>
+        </section>
+
+        <section class="resources-section">
+            <div class="container">
+                <div class="subject-filters">
+                    <button class="filter-btn active" data-subject="all">All Subjects</button>
+                    <button class="filter-btn" data-subject="physics">Physics</button>
+                    <button class="filter-btn" data-subject="chemistry">Chemistry</button>
+                    <button class="filter-btn" data-subject="mathematics">Mathematics</button>
+                </div>
+
+                <div class="resources-grid">
+                    <!-- Physics Resources -->
+                    <div class="resource-card" data-subject="physics">
+                        <i class="fas fa-atom"></i>
+                        <h3>Physics</h3>
+                        <p>Comprehensive study materials covering mechanics, thermodynamics, electromagnetism, and more.</p>
+                        <ul class="resource-features">
+                            <li>Topic-wise practice questions</li>
+                            <li>Previous year papers with solutions</li>
+                            <li>Concept videos and animations</li>
+                            <li>Formula sheets and quick revision notes</li>
+                        </ul>
+                        <a href="#" class="btn-secondary">Start Learning</a>
+                    </div>
+
+                    <!-- Chemistry Resources -->
+                    <div class="resource-card" data-subject="chemistry">
+                        <i class="fas fa-flask"></i>
+                        <h3>Chemistry</h3>
+                        <p>Complete coverage of physical, organic, and inorganic chemistry with detailed explanations.</p>
+                        <ul class="resource-features">
+                            <li>Reaction mechanisms and equations</li>
+                            <li>Periodic table and atomic structure</li>
+                            <li>Practice problems with solutions</li>
+                            <li>Topic-wise study materials</li>
+                        </ul>
+                        <a href="#" class="btn-secondary">Start Learning</a>
+                    </div>
+
+                    <!-- Mathematics Resources -->
+                    <div class="resource-card" data-subject="mathematics">
+                        <i class="fas fa-square-root-alt"></i>
+                        <h3>Mathematics</h3>
+                        <p>Extensive practice materials for calculus, algebra, coordinate geometry, and more.</p>
+                        <ul class="resource-features">
+                            <li>Step-by-step solutions</li>
+                            <li>Practice worksheets</li>
+                            <li>Video lectures</li>
+                            <li>Quick formula reference</li>
+                        </ul>
+                        <a href="#" class="btn-secondary">Start Learning</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="practice-questions">
+            <div class="container">
+                <h2>Practice Questions</h2>
+                <div class="questions-container">
+                    <!-- Physics Question -->
+                    <div class="question-card" data-subject="physics">
+                        <div class="question-header">
+                            <span class="subject-tag physics">Physics</span>
+                            <span class="difficulty medium">Medium</span>
+                            <h3>Kinematics: Projectile Motion</h3>
+                        </div>
+                        <div class="question-content">
+                            <p>A projectile is launched with an initial velocity of 20 m/s at an angle of 45° with the horizontal. Calculate the maximum height reached and the time of flight.</p>
+                            <div class="example">
+                                <h4>Solution:</h4>
+                                <div class="solution-steps">
+                                    <p>1. Maximum height (H) = (v₀²sin²θ)/(2g)</p>
+                                    <p>2. Time of flight (T) = (2v₀sinθ)/g</p>
+                                    <p>3. Substituting values:</p>
+                                    <p>   H = (20² × sin²45°)/(2 × 9.8) = 10.2 m</p>
+                                    <p>   T = (2 × 20 × sin45°)/9.8 = 2.89 s</p>
+                                </div>
+                            </div>
+                            <button class="btn-secondary show-solution">Show Explanation</button>
+                            <div class="solution hidden">
+                                <h4>Detailed Explanation:</h4>
+                                <div class="solution-explanation">
+                                    <p>1. For maximum height, we use the vertical component of velocity</p>
+                                    <p>2. The time of flight considers both upward and downward motion</p>
+                                    <p>3. Key concepts: projectile motion, conservation of energy</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Chemistry Question -->
+                    <div class="question-card" data-subject="chemistry">
+                        <div class="question-header">
+                            <span class="subject-tag chemistry">Chemistry</span>
+                            <span class="difficulty hard">Hard</span>
+                            <h3>Chemical Equilibrium</h3>
+                        </div>
+                        <div class="question-content">
+                            <p>For the reaction N₂(g) + 3H₂(g) ⇌ 2NH₃(g), if Kp = 1.5 × 10⁻⁵ at 400°C, calculate the equilibrium constant Kc.</p>
+                            <div class="example">
+                                <h4>Solution:</h4>
+                                <div class="solution-steps">
+                                    <p>1. Kp = Kc(RT)^Δn</p>
+                                    <p>2. Δn = (2) - (1 + 3) = -2</p>
+                                    <p>3. T = 400°C = 673 K</p>
+                                    <p>4. Kc = Kp/(RT)^Δn</p>
+                                    <p>5. Kc = 1.5 × 10⁻⁵/(0.0821 × 673)^(-2)</p>
+                                    <p>6. Kc = 2.8 × 10⁴</p>
+                                </div>
+                            </div>
+                            <button class="btn-secondary show-solution">Show Explanation</button>
+                            <div class="solution hidden">
+                                <h4>Detailed Explanation:</h4>
+                                <div class="solution-explanation">
+                                    <p>1. Relationship between Kp and Kc</p>
+                                    <p>2. Effect of temperature on equilibrium</p>
+                                    <p>3. Significance of Δn in gas phase reactions</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Mathematics Question -->
+                    <div class="question-card" data-subject="mathematics">
+                        <div class="question-header">
+                            <span class="subject-tag maths">Mathematics</span>
+                            <span class="difficulty medium">Medium</span>
+                            <h3>Differential Equations</h3>
+                        </div>
+                        <div class="question-content">
+                            <p>Solve the differential equation: dy/dx + 2y = e⁻²ˣ, given y(0) = 1</p>
+                            <div class="example">
+                                <h4>Solution:</h4>
+                                <div class="solution-steps">
+                                    <p>1. This is a linear differential equation</p>
+                                    <p>2. Integrating factor = e^∫2dx = e²ˣ</p>
+                                    <p>3. Multiplying both sides by e²ˣ:</p>
+                                    <p>   e²ˣ(dy/dx) + 2e²ˣy = 1</p>
+                                    <p>4. d/dx(ye²ˣ) = 1</p>
+                                    <p>5. ye²ˣ = x + C</p>
+                                    <p>6. y = (x + C)e⁻²ˣ</p>
+                                    <p>7. Using y(0) = 1: C = 1</p>
+                                    <p>8. Final solution: y = (x + 1)e⁻²ˣ</p>
+                                </div>
+                            </div>
+                            <button class="btn-secondary show-solution">Show Explanation</button>
+                            <div class="solution hidden">
+                                <h4>Detailed Explanation:</h4>
+                                <div class="solution-explanation">
+                                    <p>1. Method of integrating factors</p>
+                                    <p>2. Solving first-order linear differential equations</p>
+                                    <p>3. Initial value problems</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="study-tips">
+            <div class="container">
+                <h2>Study Tips</h2>
+                <div class="tips-grid">
+                    <div class="tip-card">
+                        <i class="fas fa-clock"></i>
+                        <h3>Time Management</h3>
+                        <ul>
+                            <li>Create a daily study schedule</li>
+                            <li>Allocate time for each subject</li>
+                            <li>Include regular breaks</li>
+                            <li>Practice time-based mock tests</li>
+                        </ul>
+                    </div>
+                    <div class="tip-card">
+                        <i class="fas fa-book"></i>
+                        <h3>Study Strategy</h3>
+                        <ul>
+                            <li>Start with NCERT textbooks</li>
+                            <li>Make concise notes</li>
+                            <li>Practice previous year papers</li>
+                            <li>Focus on weak areas</li>
+                        </ul>
+                    </div>
+                    <div class="tip-card">
+                        <i class="fas fa-brain"></i>
+                        <h3>Exam Preparation</h3>
+                        <ul>
+                            <li>Regular revision</li>
+                            <li>Mock test analysis</li>
+                            <li>Formula memorization</li>
+                            <li>Speed and accuracy practice</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>PrepArena</h3>
+                <p>Your success is our priority. Join thousands of successful students who achieved their goals with PrepArena.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#features">Features</a></li>
+                    <li><a href="index.html#courses">Courses</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect With Us</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 PrepArena. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="jee-preparation.js"></script>
+</body>
+</html> 

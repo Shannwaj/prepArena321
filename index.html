@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PrepArena - Learning Experience</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="main-container">
+        <header class="header glass">
+            <nav class="nav-container">
+                <div class="logo">PrepArena</div>
+                <div class="nav-toggle" id="navToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#features" class="dropdown-toggle">
+                            Features <i class="fas fa-chevron-down"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="coding-interview.html">
+                                <i class="fas fa-laptop-code"></i>
+                                Coding Interview Prep
+                            </a></li>
+                            <li><a href="jee-mains.html">
+                                <i class="fas fa-graduation-cap"></i>
+                                JEE Mains
+                            </a></li>
+                            <li><a href="neet-preparation.html">
+                                <i class="fas fa-heartbeat"></i>
+                                NEET Preparation
+                            </a></li>
+                            <li><a href="professional-interview.html">
+                                <i class="fas fa-briefcase"></i>
+                                Professional Interview
+                            </a></li>
+                        </ul>
+                    </li>
+                    <li><a href="courses.html">Courses</a></li>
+                    <li><a href="free-courses.html">Free Courses</a></li>
+                    <li><a href="coding-interview.html">Coding Interview</a></li>
+                    <li><a href="jobs.html">Jobs</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="auth.html" class="btn-primary">Sign In</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section id="home" class="hero">
+                <div class="hero-content glass">
+                    <h1 class="animate-text">Master Your Interview & Exam Preparation</h1>
+                    <p class="animate-text">Your one-stop platform for comprehensive preparation for coding interviews, JEE Mains, NEET, and professional interviews.</p>
+                    <div class="cta-buttons">
+                        <a href="auth.html" class="btn-primary glass">Get Started</a>
+                        <a href="learn-more.html" class="btn-secondary glass">Learn More</a>
+                    </div>
+                </div>
+            </section>
+
+            <section id="features" class="features">
+                <h2 class="section-title animate-text">Why Choose PrepArena?</h2>
+                <div class="features-grid">
+                    <div class="feature-card glass">
+                        <i class="fas fa-laptop-code"></i>
+                        <h3>Coding Interviews</h3>
+                        <p>Practice with our extensive collection of coding problems and mock interviews.</p>
+                        <a href="coding-interview.html" class="btn-secondary glass">Start Learning</a>
+                    </div>
+                    <div class="feature-card glass">
+                        <i class="fas fa-graduation-cap"></i>
+                        <h3>JEE Mains & NEET</h3>
+                        <p>Comprehensive study material and mock tests for competitive exams.</p>
+                        <a href="jee-mains.html" class="btn-secondary glass">Start Learning</a>
+                    </div>
+                    <div class="feature-card glass">
+                        <i class="fas fa-briefcase"></i>
+                        <h3>Professional Interviews</h3>
+                        <p>Expert tips and practice questions for job interviews across industries.</p>
+                        <a href="professional-interview.html" class="btn-secondary glass">Start Learning</a>
+                    </div>
+                </div>
+            </section>
+
+            <section id="courses" class="courses">
+                <h2 class="section-title animate-text">Our Preparation Tracks</h2>
+                <div class="courses-grid">
+                    <div class="course-card glass">
+                        <div class="course-image coding-bg"></div>
+                        <span class="course-tag">Most Popular</span>
+                        <span class="course-price">₹4999</span>
+                        <div class="course-content">
+                            <h3>Coding Interview Prep</h3>
+                            <p>Master data structures, algorithms, and system design with our comprehensive program.</p>
+                            <ul class="course-features">
+                                <li>500+ coding problems with solutions</li>
+                                <li>Live mock interviews with experts</li>
+                                <li>System design workshops</li>
+                                <li>Video explanations & solutions</li>
+                                <li>Interview preparation roadmap</li>
+                            </ul>
+                            <a href="coding-interview.html" class="btn-secondary">Start Learning <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="course-card glass">
+                        <div class="course-image jee-bg"></div>
+                        <span class="course-tag">High Success Rate</span>
+                        <span class="course-price">₹5999</span>
+                        <div class="course-content">
+                            <h3>JEE Mains Preparation</h3>
+                            <p>Comprehensive preparation program designed by IIT toppers and experienced faculty.</p>
+                            <ul class="course-features">
+                                <li>Topic-wise video lectures</li>
+                                <li>Previous year papers analysis</li>
+                                <li>Live doubt solving sessions</li>
+                                <li>Mock tests with analysis</li>
+                                <li>Performance tracking system</li>
+                            </ul>
+                            <a href="jee-preparation.html" class="btn-secondary">Explore Course <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="course-card glass">
+                        <div class="course-image neet-bg"></div>
+                        <span class="course-tag">Comprehensive</span>
+                        <span class="course-price">₹5999</span>
+                        <div class="course-content">
+                            <h3>  NEET Preparation</h3>
+                            <p>Expert-designed program covering complete NEET syllabus with focused preparation strategy.</p>
+                            <ul class="course-features">
+                                <li>Subject-wise study material</li>
+                                <li>NCERT solutions & guides</li>
+                                <li>Chapter-wise mock tests</li>
+                                <li>Expert mentorship support</li>
+                                <li>Medical entrance guidance</li>
+                            </ul>
+                            <a href="neet-preparation.html" class="btn-secondary">Explore Course <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="free-courses" class="free-courses-promo">
+                <div class="container">
+                    <h2 class="section-title animate-text">Free Learning Resources</h2>
+                    <p class="section-description">Access high-quality educational content without any cost. Jump-start your learning journey today!</p>
+                    
+                    <div class="free-courses-grid">
+                        <div class="free-course-highlight glass">
+                            <div class="highlight-content">
+                                <i class="fas fa-gift highlight-icon"></i>
+                                <h3>Start Learning For Free</h3>
+                                <p>Explore our collection of free courses and resources designed to help you begin your preparation journey.</p>
+                                <ul class="highlight-features">
+                                    <li><i class="fas fa-check"></i> Video tutorials</li>
+                                    <li><i class="fas fa-check"></i> Practice problems</li>
+                                    <li><i class="fas fa-check"></i> Study guides</li>
+                                    <li><i class="fas fa-check"></i> Community support</li>
+                                </ul>
+                                <a href="free-courses.html" class="btn-primary">Explore Free Courses</a>
+                            </div>
+                            <div class="highlight-image">
+                                <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Free Courses">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="stats" class="stats glass">
+                <div class="stats-container">
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="50000">0</span>
+                        <span class="stat-label">Students Enrolled</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="1000">0</span>
+                        <span class="stat-label">Practice Tests</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="95">0</span>
+                        <span class="stat-label">Success Rate</span>
+                    </div>
+                </div>
+            </section>
+
+            <section id="contact" class="contact">
+                <h2 class="section-title animate-text">Get in Touch</h2>
+                <div class="contact-container">
+                    <form id="contactForm" class="contact-form glass">
+                        <div class="form-group">
+                            <input type="text" id="name" required placeholder="Your Name">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" required placeholder="Your Email">
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" required placeholder="Your Message"></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary glass">Send Message</button>
+                    </form>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer glass">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>PrepArena</h3>
+                    <p>Your success is our priority. Join thousands of successful students who achieved their goals with PrepArena.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
+                        <li><a href="#features"><i class="fas fa-star"></i> Features</a></li>
+                        <li><a href="#courses"><i class="fas fa-graduation-cap"></i> Courses</a></li>
+                        <li><a href="coding-interview.html"><i class="fas fa-laptop-code"></i> Coding Prep</a></li>
+                        <li><a href="#about"><i class="fas fa-info-circle"></i> About Us</a></li>
+                        <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+                        <li><a href="#faq"><i class="fas fa-question-circle"></i> FAQ</a></li>
+                        <li><a href="#blog"><i class="fas fa-blog"></i> Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Connect With Us</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 PrepArena. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 

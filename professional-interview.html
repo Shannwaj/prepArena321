@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Interview Guide - Study Website</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="main-container">
+        <!-- Header Section -->
+        <header class="header">
+            <nav class="nav-container">
+                <a href="index.html" class="logo">StudyHub</a>
+                <div class="nav-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="coding-interview.html">Coding Interview</a></li>
+                    <li><a href="jee-mains.html">JEE Mains</a></li>
+                    <li><a href="neet.html">NEET</a></li>
+                    <li><a href="professional-interview.html" class="active">Professional Interview</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Professional Interview Page Content -->
+        <div class="professional-interview-page">
+            <!-- Hero Section -->
+            <section class="page-hero">
+                <div class="hero-content">
+                    <h1>Professional Interview Guide</h1>
+                    <p>Master both technical and HR interviews with our comprehensive guide</p>
+                </div>
+            </section>
+
+            <!-- Interview Categories -->
+            <section class="interview-categories">
+                <div class="container">
+                    <div class="interview-category">
+                        <div class="category-header">
+                            <i class="fas fa-code"></i>
+                            <h3>Technical Interview</h3>
+                        </div>
+                        <div class="category-stats">
+                            <div class="stat-item">
+                                <div class="stat-number">500+</div>
+                                <div class="stat-label">Technical Questions</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">50+</div>
+                                <div class="stat-label">Problem Solving</div>
+                            </div>
+                        </div>
+                        <div class="category-features">
+                            <li>Data Structures & Algorithms</li>
+                            <li>System Design</li>
+                            <li>Programming Languages</li>
+                            <li>Database Management</li>
+                            <li>Operating Systems</li>
+                        </div>
+                        <div class="category-cta">
+                            <a href="#technical" class="btn-primary">View Questions</a>
+                            <a href="#practice" class="btn-secondary">Practice Now</a>
+                        </div>
+                    </div>
+
+                    <div class="interview-category">
+                        <div class="category-header">
+                            <i class="fas fa-users"></i>
+                            <h3>HR Interview</h3>
+                        </div>
+                        <div class="category-stats">
+                            <div class="stat-item">
+                                <div class="stat-number">200+</div>
+                                <div class="stat-label">HR Questions</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">30+</div>
+                                <div class="stat-label">Scenarios</div>
+                            </div>
+                        </div>
+                        <div class="category-features">
+                            <li>Behavioral Questions</li>
+                            <li>Personality Assessment</li>
+                            <li>Career Goals</li>
+                            <li>Team Management</li>
+                            <li>Problem Solving</li>
+                        </div>
+                        <div class="category-cta">
+                            <a href="#hr" class="btn-primary">View Questions</a>
+                            <a href="#practice" class="btn-secondary">Practice Now</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Technical Interview Section -->
+            <section id="technical" class="technical-interview">
+                <div class="container">
+                    <h2>Technical Interview Questions</h2>
+                    <div class="difficulty-filter">
+                        <button class="filter-btn active" data-difficulty="all">All</button>
+                        <button class="filter-btn" data-difficulty="easy">Easy</button>
+                        <button class="filter-btn" data-difficulty="medium">Medium</button>
+                        <button class="filter-btn" data-difficulty="hard">Hard</button>
+                    </div>
+                    <div class="topic-filter">
+                        <button class="filter-btn active" data-topic="all">All Topics</button>
+                        <button class="filter-btn" data-topic="java">Java</button>
+                        <button class="filter-btn" data-topic="python">Python</button>
+                        <button class="filter-btn" data-topic="javascript">JavaScript</button>
+                        <button class="filter-btn" data-topic="dsa">DSA</button>
+                        <button class="filter-btn" data-topic="cpp">C++</button>
+                        <button class="filter-btn" data-topic="c">C</button>
+                        <button class="filter-btn" data-topic="system">System Design</button>
+                    </div>
+
+                    <div class="questions-grid">
+                        <!-- Java Questions -->
+                        <div class="question-card" data-difficulty="medium" data-topic="java">
+                            <div class="card-header">
+                                <div class="card-tags">
+                                    <span class="difficulty medium">Medium</span>
+                                    <span class="topic-tag">Java</span>
+                                </div>
+                                <div class="card-icon">
+                                    <i class="fab fa-java"></i>
+                                </div>
+                            </div>
+                            <div class="card-content">
+                                <h3>HashMap vs ConcurrentHashMap</h3>
+                                <p>Explain the key differences between HashMap and ConcurrentHashMap in Java, including thread safety and performance considerations.</p>
+                                <div class="card-footer">
+                                    <button class="view-solution">View Solution</button>
+                                    <span class="time-estimate">5 min read</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Python Questions -->
+                        <div class="question-card" data-difficulty="hard" data-topic="python">
+                            <div class="card-header">
+                                <div class="card-tags">
+                                    <span class="difficulty hard">Hard</span>
+                                    <span class="topic-tag">Python</span>
+                                </div>
+                                <div class="card-icon">
+                                    <i class="fab fa-python"></i>
+                                </div>
+                            </div>
+                            <div class="card-content">
+                                <h3>Python GIL</h3>
+                                <p>Explain Python's Global Interpreter Lock (GIL) and its implications for multi-threading and performance.</p>
+                                <div class="card-footer">
+                                    <button class="view-solution">View Solution</button>
+                                    <span class="time-estimate">8 min read</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- System Design Questions -->
+                        <div class="question-card" data-difficulty="hard" data-topic="system">
+                            <div class="card-header">
+                                <div class="card-tags">
+                                    <span class="difficulty hard">Hard</span>
+                                    <span class="topic-tag">System Design</span>
+                                </div>
+                                <div class="card-icon">
+                                    <i class="fas fa-server"></i>
+                                </div>
+                            </div>
+                            <div class="card-content">
+                                <h3>Distributed Cache</h3>
+                                <p>Design a distributed cache system with considerations for scalability, consistency, and fault tolerance.</p>
+                                <div class="card-footer">
+                                    <button class="view-solution">View Solution</button>
+                                    <span class="time-estimate">10 min read</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- HR Interview Section -->
+            <section id="hr" class="hr-interview">
+                <div class="container">
+                    <h2>HR Interview Questions</h2>
+                    <div class="category-filter">
+                        <button class="filter-btn active" data-category="all">All</button>
+                        <button class="filter-btn" data-category="behavioral">Behavioral</button>
+                        <button class="filter-btn" data-category="situational">Situational</button>
+                        <button class="filter-btn" data-category="personality">Personality</button>
+                        <button class="filter-btn" data-category="leadership">Leadership</button>
+                    </div>
+
+                    <div class="questions-grid">
+                        <!-- Behavioral Questions -->
+                        <div class="question-card" data-category="behavioral">
+                            <div class="card-header">
+                                <div class="card-tags">
+                                    <span class="category-tag">Behavioral</span>
+                                </div>
+                                <div class="card-icon">
+                                    <i class="fas fa-users"></i>
+                                </div>
+                            </div>
+                            <div class="card-content">
+                                <h3>Learning New Technology</h3>
+                                <p>Tell me about a time when you had to learn a new technology quickly. How did you approach it?</p>
+                                <div class="card-footer">
+                                    <button class="view-solution">View Answer</button>
+                                    <span class="time-estimate">3 min read</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Leadership Questions -->
+                        <div class="question-card" data-category="leadership">
+                            <div class="card-header">
+                                <div class="card-tags">
+                                    <span class="category-tag">Leadership</span>
+                                </div>
+                                <div class="card-icon">
+                                    <i class="fas fa-chess"></i>
+                                </div>
+                            </div>
+                            <div class="card-content">
+                                <h3>Team Conflicts</h3>
+                                <p>How do you handle team conflicts? Share an example of a challenging situation you resolved.</p>
+                                <div class="card-footer">
+                                    <button class="view-solution">View Answer</button>
+                                    <span class="time-estimate">4 min read</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Situational Questions -->
+                        <div class="question-card" data-category="situational">
+                            <div class="card-header">
+                                <div class="card-tags">
+                                    <span class="category-tag">Situational</span>
+                                </div>
+                                <div class="card-icon">
+                                    <i class="fas fa-tasks"></i>
+                                </div>
+                            </div>
+                            <div class="card-content">
+                                <h3>Project Deadline</h3>
+                                <p>How would you handle a situation where your project deadline is at risk?</p>
+                                <div class="card-footer">
+                                    <button class="view-solution">View Answer</button>
+                                    <span class="time-estimate">3 min read</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Interview Tips Section -->
+            <section class="interview-tips">
+                <div class="container">
+                    <h2>Interview Tips & Best Practices</h2>
+                    <div class="tips-grid">
+                        <div class="tip-card">
+                            <i class="fas fa-clock"></i>
+                            <h3>Time Management</h3>
+                            <ul>
+                                <li>Arrive 15 minutes early</li>
+                                <li>Keep answers concise</li>
+                                <li>Practice with time limits</li>
+                                <li>Plan your day accordingly</li>
+                            </ul>
+                        </div>
+                        <div class="tip-card">
+                            <i class="fas fa-comments"></i>
+                            <h3>Communication</h3>
+                            <ul>
+                                <li>Speak clearly and confidently</li>
+                                <li>Use professional language</li>
+                                <li>Listen actively</li>
+                                <li>Ask clarifying questions</li>
+                            </ul>
+                        </div>
+                        <div class="tip-card">
+                            <i class="fas fa-tasks"></i>
+                            <h3>Preparation</h3>
+                            <ul>
+                                <li>Research the company</li>
+                                <li>Review your resume</li>
+                                <li>Practice common questions</li>
+                                <li>Prepare questions to ask</li>
+                            </ul>
+                        </div>
+                        <div class="tip-card">
+                            <i class="fas fa-user-tie"></i>
+                            <h3>Professionalism</h3>
+                            <ul>
+                                <li>Dress appropriately</li>
+                                <li>Maintain good posture</li>
+                                <li>Show enthusiasm</li>
+                                <li>Follow up after interview</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Footer Section -->
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>About Us</h3>
+                    <p>StudyHub is your comprehensive platform for exam preparation and professional development.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="coding-interview.html">Coding Interview</a></li>
+                        <li><a href="jee-mains.html">JEE Mains</a></li>
+                        <li><a href="neet.html">NEET</a></li>
+                        <li><a href="professional-interview.html">Professional Interview</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Connect With Us</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Navigation Toggle
+        const navToggle = document.querySelector('.nav-toggle');
+        const navLinks = document.querySelector('.nav-links');
+
+        navToggle.addEventListener('click', () => {
+            navToggle.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+
+        // Filter Buttons
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const questionCards = document.querySelectorAll('.question-card');
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Remove active class from all buttons
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                // Add active class to clicked button
+                button.classList.add('active');
+
+                const filterType = button.getAttribute('data-difficulty') || 
+                                 button.getAttribute('data-topic') || 
+                                 button.getAttribute('data-category');
+                const filterValue = button.textContent.toLowerCase();
+
+                questionCards.forEach(card => {
+                    if (filterType === 'all' || card.getAttribute(`data-${filterType}`) === filterValue) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Header Scroll Effect
+        let lastScroll = 0;
+        const header = document.querySelector('.header');
+
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+
+            if (currentScroll <= 0) {
+                header.classList.remove('scroll-up');
+                return;
+            }
+
+            if (currentScroll > lastScroll && !header.classList.contains('scroll-down')) {
+                header.classList.remove('scroll-up');
+                header.classList.add('scroll-down');
+            } else if (currentScroll < lastScroll && header.classList.contains('scroll-down')) {
+                header.classList.remove('scroll-down');
+                header.classList.add('scroll-up');
+            }
+            lastScroll = currentScroll;
+        });
+    </script>
+</body>
+</html> 

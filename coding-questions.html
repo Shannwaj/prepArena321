@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coding Interview Questions - PrepArena</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism-tomorrow.min.css" rel="stylesheet" />
+</head>
+<body>
+    <header class="header">
+        <nav class="nav-container">
+            <div class="logo">PrepArena</div>
+            <div class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#features">Features</a></li>
+                <li><a href="index.html#courses">Courses</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+                <li><a href="#" class="btn-primary">Sign In</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="coding-questions-page">
+        <section class="page-hero">
+            <div class="hero-content">
+                <h1>Coding Interview Questions</h1>
+                <p>Practice with real coding questions from top tech companies</p>
+            </div>
+        </section>
+
+        <section class="questions-section">
+            <div class="container">
+                <div class="filters">
+                    <div class="difficulty-filter">
+                        <button class="filter-btn active" data-difficulty="all">All</button>
+                        <button class="filter-btn" data-difficulty="easy">Easy</button>
+                        <button class="filter-btn" data-difficulty="medium">Medium</button>
+                        <button class="filter-btn" data-difficulty="hard">Hard</button>
+                    </div>
+                    <div class="topic-filter">
+                        <button class="filter-btn active" data-topic="all">All Topics</button>
+                        <button class="filter-btn" data-topic="arrays">Arrays</button>
+                        <button class="filter-btn" data-topic="strings">Strings</button>
+                        <button class="filter-btn" data-topic="linked-lists">Linked Lists</button>
+                        <button class="filter-btn" data-topic="trees">Trees</button>
+                        <button class="filter-btn" data-topic="graphs">Graphs</button>
+                        <button class="filter-btn" data-topic="dynamic-programming">DP</button>
+                    </div>
+                </div>
+
+                <div class="questions-container">
+                    <!-- Easy Questions -->
+                    <div class="question-card" data-difficulty="easy" data-topic="arrays">
+                        <div class="question-header">
+                            <span class="difficulty easy">Easy</span>
+                            <span class="topic-tag">Arrays</span>
+                            <h3>Two Sum</h3>
+                        </div>
+                        <div class="question-content">
+                            <p>Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.</p>
+                            <div class="example">
+                                <h4>Example:</h4>
+                                <pre><code class="language-python">
+Input: nums = [2, 7, 11, 15], target = 9
+Output: [0, 1]
+Explanation: nums[0] + nums[1] = 2 + 7 = 9
+                                </code></pre>
+                            </div>
+                            <button class="btn-secondary show-solution">Show Solution</button>
+                            <div class="solution hidden">
+                                <h4>Solution:</h4>
+                                <pre><code class="language-python">
+def two_sum(nums, target):
+    seen = {}
+    for i, num in enumerate(nums):
+        complement = target - num
+        if complement in seen:
+            return [seen[complement], i]
+        seen[num] = i
+    return []
+
+# Time Complexity: O(n)
+# Space Complexity: O(n)
+                                </code></pre>
+                                <div class="solution-explanation">
+                                    <h4>Explanation:</h4>
+                                    <p>1. Use a hash map to store numbers and their indices</p>
+                                    <p>2. For each number, check if its complement (target - num) exists in the hash map</p>
+                                    <p>3. If found, return the current index and the complement's index</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Medium Questions -->
+                    <div class="question-card" data-difficulty="medium" data-topic="strings">
+                        <div class="question-header">
+                            <span class="difficulty medium">Medium</span>
+                            <span class="topic-tag">Strings</span>
+                            <h3>Longest Substring Without Repeating Characters</h3>
+                        </div>
+                        <div class="question-content">
+                            <p>Given a string s, find the length of the longest substring without repeating characters.</p>
+                            <div class="example">
+                                <h4>Example:</h4>
+                                <pre><code class="language-python">
+Input: s = "abcabcbb"
+Output: 3
+Explanation: The longest substring without repeating characters is "abc" with length 3.
+                                </code></pre>
+                            </div>
+                            <button class="btn-secondary show-solution">Show Solution</button>
+                            <div class="solution hidden">
+                                <h4>Solution:</h4>
+                                <pre><code class="language-python">
+def length_of_longest_substring(s):
+    char_index = {}
+    max_length = 0
+    start = 0
+    
+    for i, char in enumerate(s):
+        if char in char_index and char_index[char] >= start:
+            start = char_index[char] + 1
+        else:
+            max_length = max(max_length, i - start + 1)
+        char_index[char] = i
+    
+    return max_length
+
+# Time Complexity: O(n)
+# Space Complexity: O(min(m,n)) where m is the size of the charset
+                                </code></pre>
+                                <div class="solution-explanation">
+                                    <h4>Explanation:</h4>
+                                    <p>1. Use sliding window technique with two pointers</p>
+                                    <p>2. Keep track of character positions in a hash map</p>
+                                    <p>3. Update window start when finding a repeating character</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Hard Questions -->
+                    <div class="question-card" data-difficulty="hard" data-topic="dynamic-programming">
+                        <div class="question-header">
+                            <span class="difficulty hard">Hard</span>
+                            <span class="topic-tag">Dynamic Programming</span>
+                            <h3>Regular Expression Matching</h3>
+                        </div>
+                        <div class="question-content">
+                            <p>Given an input string s and a pattern p, implement regular expression matching with support for '.' and '*' where:</p>
+                            <ul>
+                                <li>'.' Matches any single character</li>
+                                <li>'*' Matches zero or more of the preceding element</li>
+                            </ul>
+                            <div class="example">
+                                <h4>Example:</h4>
+                                <pre><code class="language-python">
+Input: s = "aa", p = "a*"
+Output: true
+Explanation: '*' means zero or more of the preceding element, 'a'.
+                                </code></pre>
+                            </div>
+                            <button class="btn-secondary show-solution">Show Solution</button>
+                            <div class="solution hidden">
+                                <h4>Solution:</h4>
+                                <pre><code class="language-python">
+def is_match(s, p):
+    m, n = len(s), len(p)
+    dp = [[False] * (n + 1) for _ in range(m + 1)]
+    dp[0][0] = True
+    
+    for j in range(1, n + 1):
+        if p[j-1] == '*':
+            dp[0][j] = dp[0][j-2]
+    
+    for i in range(1, m + 1):
+        for j in range(1, n + 1):
+            if p[j-1] == s[i-1] or p[j-1] == '.':
+                dp[i][j] = dp[i-1][j-1]
+            elif p[j-1] == '*':
+                dp[i][j] = dp[i][j-2]
+                if p[j-2] == s[i-1] or p[j-2] == '.':
+                    dp[i][j] = dp[i][j] or dp[i-1][j]
+    
+    return dp[m][n]
+
+# Time Complexity: O(mn)
+# Space Complexity: O(mn)
+                                </code></pre>
+                                <div class="solution-explanation">
+                                    <h4>Explanation:</h4>
+                                    <p>1. Use dynamic programming with a 2D table</p>
+                                    <p>2. Handle three cases: exact match, dot match, and star match</p>
+                                    <p>3. For star, consider both zero and one or more occurrences</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>PrepArena</h3>
+                <p>Your success is our priority. Join thousands of successful students who achieved their goals with PrepArena.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#features">Features</a></li>
+                    <li><a href="index.html#courses">Courses</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect With Us</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 PrepArena. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-python.min.js"></script>
+    <script src="script.js"></script>
+    <script src="coding-questions.js"></script>
+</body>
+</html> 

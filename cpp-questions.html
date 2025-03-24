@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C++ Interview Questions - PrepArena</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism-tomorrow.min.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="main-container">
+        <header class="header glass">
+            <nav class="nav-container">
+                <div class="logo">PrepArena</div>
+                <div class="nav-toggle" id="navToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle">
+                            Features <i class="fas fa-chevron-down"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="coding-interview.html">
+                                <i class="fas fa-laptop-code"></i>
+                                Coding Interview Prep
+                            </a></li>
+                            <li><a href="jee-mains.html">
+                                <i class="fas fa-graduation-cap"></i>
+                                JEE Mains
+                            </a></li>
+                            <li><a href="neet-preparation.html">
+                                <i class="fas fa-heartbeat"></i>
+                                NEET Preparation
+                            </a></li>
+                            <li><a href="professional-interview.html">
+                                <i class="fas fa-briefcase"></i>
+                                Professional Interview
+                            </a></li>
+                        </ul>
+                    </li>
+                    <li><a href="courses.html">Courses</a></li>
+                    <li><a href="free-courses.html">Free Courses</a></li>
+                    <li><a href="jobs.html">Jobs</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="auth.html" class="btn-primary">Sign In</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section class="page-hero">
+                <div class="hero-content">
+                    <h1>C++ Interview Questions</h1>
+                    <p>Master C++ concepts for technical interviews and coding challenges</p>
+                </div>
+            </section>
+
+            <section class="language-questions">
+                <div class="container">
+                    <div class="language-questions-grid">
+                        <!-- Question 1 -->
+                        <div class="language-question-card glass">
+                            <h3>1. What are the differences between C and C++?</h3>
+                            <div class="answer">
+                                <p>Key differences include:</p>
+                                <ul>
+                                    <li>C++ supports object-oriented programming with classes and objects, while C is procedural</li>
+                                    <li>C++ supports function overloading, C doesn't</li>
+                                    <li>C++ has exception handling, C doesn't</li>
+                                    <li>C++ supports references, C doesn't</li>
+                                    <li>C++ has the Standard Template Library (STL), C doesn't</li>
+                                    <li>C++ supports operator overloading, C doesn't</li>
+                                    <li>C++ has namespace feature, C doesn't</li>
+                                    <li>C++ supports function templates and class templates, C doesn't</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Question 2 -->
+                        <div class="language-question-card glass">
+                            <h3>2. What is the difference between new/delete and malloc/free in C++?</h3>
+                            <div class="answer">
+                                <p>Main differences:</p>
+                                <ul>
+                                    <li><strong>new/delete</strong> are operators that call constructors/destructors, while <strong>malloc/free</strong> are functions that don't</li>
+                                    <li><strong>new</strong> returns exact data type, while <strong>malloc</strong> returns void*</li>
+                                    <li><strong>new</strong> can be overloaded, <strong>malloc</strong> cannot</li>
+                                    <li><strong>new</strong> throws exceptions on failure, <strong>malloc</strong> returns NULL</li>
+                                    <li><strong>new</strong> allocates memory from the free store, <strong>malloc</strong> allocates from the heap</li>
+                                </ul>
+                                <pre><code class="language-cpp">
+// Using new/delete
+int* p1 = new int(10);
+delete p1;
+
+// Using malloc/free
+int* p2 = (int*)malloc(sizeof(int));
+*p2 = 10;
+free(p2);
+                                </code></pre>
+                            </div>
+                        </div>
+
+                        <!-- Question 3 -->
+                        <div class="language-question-card glass">
+                            <h3>3. Explain virtual functions and polymorphism in C++</h3>
+                            <div class="answer">
+                                <p>Virtual functions enable polymorphism in C++:</p>
+                                <ul>
+                                    <li>Declared with 'virtual' keyword in base class</li>
+                                    <li>Allow derived classes to override the base implementation</li>
+                                    <li>Resolved at runtime (dynamic binding) based on the object's actual type</li>
+                                    <li>Implemented using virtual function tables (vtables)</li>
+                                    <li>Enable "late binding" through pointers or references</li>
+                                </ul>
+                                <pre><code class="language-cpp">
+class Base {
+public:
+    virtual void show() { cout << "Base class"; }
+    // Pure virtual function (abstract)
+    virtual void pure() = 0;
+};
+
+class Derived : public Base {
+public:
+    void show() override { cout << "Derived class"; }
+    void pure() override { cout << "Implemented"; }
+};
+
+// Usage:
+Base* obj = new Derived();
+obj->show(); // Outputs: "Derived class"
+                                </code></pre>
+                            </div>
+                        </div>
+
+                        <!-- Question 4 -->
+                        <div class="language-question-card glass">
+                            <h3>4. What is the difference between a struct and a class in C++?</h3>
+                            <div class="answer">
+                                <p>The only technical difference is the default access level:</p>
+                                <ul>
+                                    <li>In a <strong>struct</strong>, members are public by default</li>
+                                    <li>In a <strong>class</strong>, members are private by default</li>
+                                    <li>Both can have member functions, constructors, destructors, etc.</li>
+                                    <li>Both can inherit from other classes/structs</li>
+                                    <li>Both can use access specifiers (public, private, protected)</li>
+                                </ul>
+                                <p>Convention suggests:</p>
+                                <ul>
+                                    <li>Use <strong>struct</strong> for passive objects with public data</li>
+                                    <li>Use <strong>class</strong> for active objects with private data and public interfaces</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Question 5 -->
+                        <div class="language-question-card glass">
+                            <h3>5. Explain the different types of inheritance in C++</h3>
+                            <div class="answer">
+                                <p>C++ supports five types of inheritance:</p>
+                                <ul>
+                                    <li><strong>Single inheritance</strong>: A class inherits from one base class</li>
+                                    <li><strong>Multiple inheritance</strong>: A class inherits from multiple base classes</li>
+                                    <li><strong>Hierarchical inheritance</strong>: Multiple classes inherit from a single base class</li>
+                                    <li><strong>Multilevel inheritance</strong>: A class inherits from a derived class</li>
+                                    <li><strong>Hybrid inheritance</strong>: Combination of multiple and hierarchical inheritance</li>
+                                </ul>
+                                <pre><code class="language-cpp">
+// Single inheritance
+class Derived : public Base { };
+
+// Multiple inheritance
+class Derived : public Base1, public Base2 { };
+
+// Multilevel inheritance
+class C : public B { }; // where B : public A { };
+                                </code></pre>
+                            </div>
+                        </div>
+
+                        <!-- Question 6 -->
+                        <div class="language-question-card glass">
+                            <h3>6. What is the diamond problem in C++ and how is it resolved?</h3>
+                            <div class="answer">
+                                <p>The diamond problem occurs in multiple inheritance when a class inherits from two classes that inherit from a common base class:</p>
+                                <pre><code class="language-cpp">
+class A { public: int x; };
+class B : public A { };
+class C : public A { };
+class D : public B, public C { }; // Diamond problem!
+                                </code></pre>
+                                <p>The problem: Class D has two copies of all members from class A.</p>
+                                <p>Solution: Use virtual inheritance:</p>
+                                <pre><code class="language-cpp">
+class A { public: int x; };
+class B : virtual public A { };
+class C : virtual public A { };
+class D : public B, public C { }; // Resolved
+                                </code></pre>
+                                <p>Virtual inheritance ensures only one copy of the base class exists in the inheritance hierarchy.</p>
+                            </div>
+                        </div>
+
+                        <!-- Question 7 -->
+                        <div class="language-question-card glass">
+                            <h3>7. What are smart pointers and how do they work?</h3>
+                            <div class="answer">
+                                <p>Smart pointers are objects that act like pointers but provide automatic memory management:</p>
+                                <ul>
+                                    <li><strong>unique_ptr</strong>: Exclusive ownership model; cannot be copied</li>
+                                    <li><strong>shared_ptr</strong>: Shared ownership model; uses reference counting</li>
+                                    <li><strong>weak_ptr</strong>: Non-owning reference to shared_ptr; helps break circular references</li>
+                                </ul>
+                                <pre><code class="language-cpp">
+#include <memory>
+
+// unique_ptr
+std::unique_ptr<int> u_ptr = std::make_unique<int>(10);
+
+// shared_ptr
+std::shared_ptr<int> s_ptr1 = std::make_shared<int>(20);
+std::shared_ptr<int> s_ptr2 = s_ptr1; // Reference count = 2
+
+// weak_ptr
+std::weak_ptr<int> w_ptr = s_ptr1;
+                                </code></pre>
+                                <p>Benefits include:</p>
+                                <ul>
+                                    <li>Automatic memory deallocation when no longer needed</li>
+                                    <li>Prevention of memory leaks</li>
+                                    <li>Exception safety</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Question 8 -->
+                        <div class="language-question-card glass">
+                            <h3>8. Explain move semantics and perfect forwarding in C++11</h3>
+                            <div class="answer">
+                                <p><strong>Move Semantics</strong> allows transferring resources (like memory ownership) from one object to another, avoiding unnecessary copying:</p>
+                                <ul>
+                                    <li>Utilizes rvalue references (&&)</li>
+                                    <li>Move constructor and move assignment operator</li>
+                                    <li>std::move() converts an object to an rvalue reference</li>
+                                </ul>
+                                <pre><code class="language-cpp">
+// Move constructor
+MyClass(MyClass&& other) noexcept 
+    : data(other.data) {
+    other.data = nullptr; // Transfer ownership
+}
+
+// Usage
+MyClass obj1;
+MyClass obj2 = std::move(obj1); // Move from obj1 to obj2
+                                </code></pre>
+                                <p><strong>Perfect Forwarding</strong> allows passing arguments while preserving their value category (lvalue/rvalue):</p>
+                                <pre><code class="language-cpp">
+template<typename T, typename... Args>
+std::unique_ptr<T> make_unique(Args&&... args) {
+    return std::unique_ptr<T>(new T(std::forward<Args>(args)...));
+}
+                                </code></pre>
+                                <p>std::forward ensures arguments are forwarded with their original value category intact.</p>
+                            </div>
+                        </div>
+
+                        <!-- Question 9 -->
+                        <div class="language-question-card glass">
+                            <h3>9. What are lambda expressions in C++?</h3>
+                            <div class="answer">
+                                <p>Lambda expressions are anonymous functions that can be defined inline:</p>
+                                <pre><code class="language-cpp">
+// Basic lambda syntax
+[capture](parameters) -> return_type { body }
+
+// Example
+auto add = [](int a, int b) -> int { return a + b; };
+int sum = add(5, 3); // sum = 8
+
+// Capture variables by value
+int x = 10;
+auto incrementBy = [x](int y) { return x + y; };
+
+// Capture variables by reference
+auto modify = [&x]() { x += 5; };
+
+// Capture all variables
+auto all = [=]() { /* use all variables by value */ };
+auto allRef = [&]() { /* use all variables by reference */ };
+                                </code></pre>
+                                <p>Lambdas are useful for:</p>
+                                <ul>
+                                    <li>Short, one-time use functions</li>
+                                    <li>Function arguments (e.g., for STL algorithms)</li>
+                                    <li>Callbacks</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Question 10 -->
+                        <div class="language-question-card glass">
+                            <h3>10. What is RAII in C++ and why is it important?</h3>
+                            <div class="answer">
+                                <p>RAII (Resource Acquisition Is Initialization) is a C++ programming idiom:</p>
+                                <ul>
+                                    <li>Resources are acquired during object construction</li>
+                                    <li>Resources are released during object destruction</li>
+                                    <li>Resources include memory, file handles, locks, network connections, etc.</li>
+                                </ul>
+                                <pre><code class="language-cpp">
+class FileHandler {
+private:
+    FILE* file;
+public:
+    // Constructor acquires resource
+    FileHandler(const char* filename) {
+        file = fopen(filename, "r");
+        if (!file) throw std::runtime_error("File open failed");
+    }
+    
+    // Destructor releases resource
+    ~FileHandler() {
+        if (file) fclose(file);
+    }
+    
+    // Prevent copying
+    FileHandler(const FileHandler&) = delete;
+    FileHandler& operator=(const FileHandler&) = delete;
+};
+
+// Usage
+{
+    FileHandler fh("example.txt"); // File opened
+    // Use file...
+} // File automatically closed when fh goes out of scope
+                                </code></pre>
+                                <p>Benefits of RAII:</p>
+                                <ul>
+                                    <li>Automatic resource management</li>
+                                    <li>Exception safety</li>
+                                    <li>Prevents resource leaks</li>
+                                    <li>Cleaner code with fewer try-catch blocks</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Question 11 -->
+                        <div class="language-question-card glass">
+                            <h3>11. What is a friend function and friend class in C++?</h3>
+                            <div class="answer">
+                                <p>Friend functions and classes are given special access to private and protected members:</p>
+                                <ul>
+                                    <li>A <strong>friend function</strong> is not a member function but can access private/protected members</li>
+                                    <li>A <strong>friend class</strong> can access private/protected members of the class that declared it as a friend</li>
+                                </ul>
+                                <pre><code class="language-cpp">
+class MyClass {
+private:
+    int data = 10;
+    
+    // Friend function declaration
+    friend void display(MyClass obj);
+    
+    // Friend class declaration
+    friend class Helper;
+};
+
+// Friend function definition
+void display(MyClass obj) {
+    // Can access private members
+    std::cout << obj.data << std::endl;
+}
+
+// Friend class
+class Helper {
+public:
+    void modify(MyClass& obj) {
+        // Can access private members
+        obj.data = 20;
+    }
+};
+                                </code></pre>
+                                <p>Important considerations:</p>
+                                <ul>
+                                    <li>Friendship is not transitive (if A is friend of B, and B is friend of C, A is not automatically friend of C)</li>
+                                    <li>Friendship is not inherited</li>
+                                    <li>Friendship breaks encapsulation, so use sparingly</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Question 12 -->
+                        <div class="language-question-card glass">
+                            <h3>12. Explain function overloading and operator overloading in C++</h3>
+                            <div class="answer">
+                                <p><strong>Function Overloading</strong> allows multiple functions with the same name but different parameters:</p>
+                                <pre><code class="language-cpp">
+void print(int x) {
+    std::cout << "Integer: " << x << std::endl;
+}
+
+void print(double x) {
+    std::cout << "Double: " << x << std::endl;
+}
+
+void print(std::string s) {
+    std::cout << "String: " << s << std::endl;
+}
+
+// Usage
+print(5);       // Calls print(int)
+print(3.14);    // Calls print(double)
+print("Hello"); // Calls print(std::string)
+                                </code></pre>
+                                <p><strong>Operator Overloading</strong> allows redefining operators for custom types:</p>
+                                <pre><code class="language-cpp">
+class Complex {
+private:
+    double real, imag;
+    
+public:
+    Complex(double r, double i) : real(r), imag(i) {}
+    
+    // Overload + operator
+    Complex operator+(const Complex& other) const {
+        return Complex(real + other.real, imag + other.imag);
+    }
+    
+    // Overload << operator as a friend function
+    friend std::ostream& operator<<(std::ostream& os, const Complex& c);
+};
+
+std::ostream& operator<<(std::ostream& os, const Complex& c) {
+    os << c.real << " + " << c.imag << "i";
+    return os;
+}
+
+// Usage
+Complex a(1.0, 2.0);
+Complex b(3.0, 4.0);
+Complex c = a + b;      // Uses operator+
+std::cout << c << std::endl; // Uses operator<<
+                                </code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="cta-section">
+                <div class="container">
+                    <h2>Ready to Master C++?</h2>
+                    <p>Take your programming skills to the next level with our comprehensive C++ course</p>
+                    <div class="cta-buttons">
+                        <a href="courses.html" class="btn-primary">View Full Course <i class="fas fa-arrow-right"></i></a>
+                        <a href="data-structures.html" class="btn-secondary">Back to Data Structures</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>About PrepArena</h3>
+                    <p>Your one-stop platform for comprehensive preparation for coding interviews, competitive exams, and career growth.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+                        <li><a href="courses.html"><i class="fas fa-chevron-right"></i> Courses</a></li>
+                        <li><a href="free-courses.html"><i class="fas fa-chevron-right"></i> Free Courses</a></li>
+                        <li><a href="jobs.html"><i class="fas fa-chevron-right"></i> Jobs</a></li>
+                        <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> +1 234 567 8900</li>
+                        <li><i class="fas fa-envelope"></i> info@preparena.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Tech Street, Silicon Valley</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 PrepArena. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-cpp.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html> 

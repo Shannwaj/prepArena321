@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Courses - PrepArena</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="main-container">
+        <header class="header glass">
+            <nav class="nav-container">
+                <div class="logo">PrepArena</div>
+                <div class="nav-toggle" id="navToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle">
+                            Features <i class="fas fa-chevron-down"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="coding-interview.html">
+                                <i class="fas fa-laptop-code"></i>
+                                Coding Interview Prep
+                            </a></li>
+                            <li><a href="jee-mains.html">
+                                <i class="fas fa-graduation-cap"></i>
+                                JEE Mains
+                            </a></li>
+                            <li><a href="neet-preparation.html">
+                                <i class="fas fa-heartbeat"></i>
+                                NEET Preparation
+                            </a></li>
+                            <li><a href="professional-interview.html">
+                                <i class="fas fa-briefcase"></i>
+                                Professional Interview
+                            </a></li>
+                        </ul>
+                    </li>
+                    <li><a href="courses.html">Courses</a></li>
+                    <li><a href="free-courses.html" class="active">Free Courses</a></li>
+                    <li><a href="jobs.html">Jobs</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="auth.html" class="btn-primary">Sign In</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section class="page-hero">
+                <div class="hero-content">
+                    <h1>Free Learning Resources</h1>
+                    <p>Access high-quality educational content without any cost. Start your learning journey today!</p>
+                </div>
+            </section>
+
+            <section class="course-categories">
+                <div class="container">
+                    <div class="category-filter">
+                        <button class="filter-btn active" data-category="all">
+                            <i class="fas fa-th-large"></i> All Resources
+                        </button>
+                        <button class="filter-btn" data-category="tutorial">
+                            <i class="fas fa-video"></i> Video Tutorials
+                        </button>
+                        <button class="filter-btn" data-category="practice">
+                            <i class="fas fa-code"></i> Practice Problems
+                        </button>
+                        <button class="filter-btn" data-category="guide">
+                            <i class="fas fa-book"></i> Study Guides
+                        </button>
+                    </div>
+
+                    <div class="courses-grid">
+                        <!-- Python Basics Tutorial -->
+                        <div class="course-card glass" data-category="tutorial">
+                            <div class="course-image python-bg"></div>
+                            <span class="course-tag">Beginner Friendly</span>
+                            <span class="course-price">Free</span>
+                            <div class="course-content">
+                                <h3>Python Programming Basics</h3>
+                                <p>Learn the fundamentals of Python programming with our comprehensive video tutorials.</p>
+                                <ul class="course-features">
+                                    <li>10+ video lectures</li>
+                                    <li>Interactive coding exercises</li>
+                                    <li>Basic syntax and concepts</li>
+                                    <li>Practice assignments</li>
+                                    <li>Community support</li>
+                                </ul>
+                                <div class="course-stats">
+                                    <div class="stat">
+                                        <i class="fas fa-users"></i>
+                                        <span>25K+ Students</span>
+                                    </div>
+                                    <div class="stat">
+                                        <i class="fas fa-star"></i>
+                                        <span>4.8/5 Rating</span>
+                                    </div>
+                                </div>
+                                <a href="python-basics.html" class="btn-secondary">Start Learning <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+
+                        <!-- Data Structures Practice -->
+                        <div class="course-card glass" data-category="practice">
+                            <div class="course-image ds-bg"></div>
+                            <span class="course-tag">Essential</span>
+                            <span class="course-price">Free</span>
+                            <div class="course-content">
+                                <h3>Data Structures Practice</h3>
+                                <p>Master data structures with our collection of practice problems and solutions.</p>
+                                <ul class="course-features">
+                                    <li>100+ practice problems</li>
+                                    <li>Detailed solutions</li>
+                                    <li>Time complexity analysis</li>
+                                    <li>Visual explanations</li>
+                                    <li>Progress tracking</li>
+                                </ul>
+                                <div class="course-stats">
+                                    <div class="stat">
+                                        <i class="fas fa-users"></i>
+                                        <span>15K+ Students</span>
+                                    </div>
+                                    <div class="stat">
+                                        <i class="fas fa-star"></i>
+                                        <span>4.7/5 Rating</span>
+                                    </div>
+                                </div>
+                                <a href="data-structures.html" class="btn-secondary">Start Practice <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+
+                        <!-- JEE Physics Guide -->
+                        <div class="course-card glass" data-category="guide">
+                            <div class="course-image physics-bg"></div>
+                            <span class="course-tag">Comprehensive</span>
+                            <span class="course-price">Free</span>
+                            <div class="course-content">
+                                <h3>JEE Physics Study Guide</h3>
+                                <p>Complete study material for JEE Physics with topic-wise explanations and practice.</p>
+                                <ul class="course-features">
+                                    <li>Topic-wise notes</li>
+                                    <li>Formula sheets</li>
+                                    <li>Practice questions</li>
+                                    <li>Previous year papers</li>
+                                    <li>Quick revision guides</li>
+                                </ul>
+                                <div class="course-stats">
+                                    <div class="stat">
+                                        <i class="fas fa-users"></i>
+                                        <span>20K+ Students</span>
+                                    </div>
+                                    <div class="stat">
+                                        <i class="fas fa-star"></i>
+                                        <span>4.9/5 Rating</span>
+                                    </div>
+                                </div>
+                                <a href="#" class="btn-secondary">Access Guide <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+
+                        <!-- Web Development Basics -->
+                        <div class="course-card glass" data-category="tutorial">
+                            <div class="course-image web-bg"></div>
+                            <span class="course-tag">Popular</span>
+                            <span class="course-price">Free</span>
+                            <div class="course-content">
+                                <h3>Web Development Basics</h3>
+                                <p>Learn HTML, CSS, and JavaScript fundamentals with practical examples.</p>
+                                <ul class="course-features">
+                                    <li>HTML5 basics</li>
+                                    <li>CSS styling</li>
+                                    <li>JavaScript fundamentals</li>
+                                    <li>Responsive design</li>
+                                    <li>Mini projects</li>
+                                </ul>
+                                <div class="course-stats">
+                                    <div class="stat">
+                                        <i class="fas fa-users"></i>
+                                        <span>18K+ Students</span>
+                                    </div>
+                                    <div class="stat">
+                                        <i class="fas fa-star"></i>
+                                        <span>4.6/5 Rating</span>
+                                    </div>
+                                </div>
+                                <a href="#" class="btn-secondary">Start Learning <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+
+                        <!-- NEET Biology Notes -->
+                        <div class="course-card glass" data-category="guide">
+                            <div class="course-image biology-bg"></div>
+                            <span class="course-tag">Essential</span>
+                            <span class="course-price">Free</span>
+                            <div class="course-content">
+                                <h3>NEET Biology Notes</h3>
+                                <p>Comprehensive study notes for NEET Biology with diagrams and explanations.</p>
+                                <ul class="course-features">
+                                    <li>Chapter-wise notes</li>
+                                    <li>Important diagrams</li>
+                                    <li>Key concepts</li>
+                                    <li>Practice questions</li>
+                                    <li>Quick revision tips</li>
+                                </ul>
+                                <div class="course-stats">
+                                    <div class="stat">
+                                        <i class="fas fa-users"></i>
+                                        <span>22K+ Students</span>
+                                    </div>
+                                    <div class="stat">
+                                        <i class="fas fa-star"></i>
+                                        <span>4.8/5 Rating</span>
+                                    </div>
+                                </div>
+                                <a href="#" class="btn-secondary">Access Notes <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+
+                        <!-- Interview Questions -->
+                        <div class="course-card glass" data-category="practice">
+                            <div class="course-image interview-bg"></div>
+                            <span class="course-tag">Career Ready</span>
+                            <span class="course-price">Free</span>
+                            <div class="course-content">
+                                <h3>Technical Interview Questions</h3>
+                                <p>Common interview questions and answers for technical roles.</p>
+                                <ul class="course-features">
+                                    <li>Topic-wise questions</li>
+                                    <li>Detailed answers</li>
+                                    <li>Code examples</li>
+                                    <li>Interview tips</li>
+                                    <li>Mock interviews</li>
+                                </ul>
+                                <div class="course-stats">
+                                    <div class="stat">
+                                        <i class="fas fa-users"></i>
+                                        <span>12K+ Students</span>
+                                    </div>
+                                    <div class="stat">
+                                        <i class="fas fa-star"></i>
+                                        <span>4.7/5 Rating</span>
+                                    </div>
+                                </div>
+                                <a href="#" class="btn-secondary">Start Practice <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="why-choose-us">
+                <div class="container">
+                    <h2 class="section-title">Why Choose Our Free Resources?</h2>
+                    <div class="features-grid">
+                        <div class="feature-card glass">
+                            <i class="fas fa-graduation-cap"></i>
+                            <h3>Quality Content</h3>
+                            <p>All our free resources are created by experts and regularly updated to maintain high quality.</p>
+                        </div>
+                        <div class="feature-card glass">
+                            <i class="fas fa-clock"></i>
+                            <h3>Learn at Your Pace</h3>
+                            <p>Access the content anytime, anywhere, and learn according to your schedule.</p>
+                        </div>
+                        <div class="feature-card glass">
+                            <i class="fas fa-users"></i>
+                            <h3>Community Support</h3>
+                            <p>Join our community of learners and get help from peers and mentors.</p>
+                        </div>
+                        <div class="feature-card glass">
+                            <i class="fas fa-certificate"></i>
+                            <h3>Certification Available</h3>
+                            <p>Complete the courses and earn certificates to showcase your skills.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="testimonials">
+                <div class="container">
+                    <h2 class="section-title">What Our Learners Say</h2>
+                    <div class="testimonial-slider">
+                        <div class="testimonial-card glass">
+                            <div class="testimonial-content">
+                                <i class="fas fa-quote-left"></i>
+                                <p>"The free Python course helped me start my programming journey. The content was well-structured and easy to follow."</p>
+                                <div class="testimonial-author">
+                                    <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Student">
+                                    <div>
+                                        <h4>Arun Kumar</h4>
+                                        <p>Python Developer</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial-card glass">
+                            <div class="testimonial-content">
+                                <i class="fas fa-quote-left"></i>
+                                <p>"The free NEET Biology notes were a game-changer for me. The diagrams and explanations made complex topics easy to understand."</p>
+                                <div class="testimonial-author">
+                                    <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Student">
+                                    <div>
+                                        <h4>Priya Sharma</h4>
+                                        <p>Medical Student</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial-card glass">
+                            <div class="testimonial-content">
+                                <i class="fas fa-quote-left"></i>
+                                <p>"The data structures practice problems helped me prepare for my technical interviews. The solutions were well-explained."</p>
+                                <div class="testimonial-author">
+                                    <img src="https://randomuser.me/api/portraits/men/67.jpg" alt="Student">
+                                    <div>
+                                        <h4>Rahul Verma</h4>
+                                        <p>Software Engineer</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="faq-section">
+                <div class="container">
+                    <h2 class="section-title">Frequently Asked Questions</h2>
+                    <div class="faq-grid">
+                        <div class="faq-card glass">
+                            <h3><i class="fas fa-plus"></i> Are these resources really free?</h3>
+                            <p>Yes, all the resources listed on this page are completely free to access. You can start learning without any cost.</p>
+                        </div>
+                        <div class="faq-card glass">
+                            <h3><i class="fas fa-plus"></i> Do I need to create an account to access free resources?</h3>
+                            <p>While you can access most resources without an account, creating a free account allows you to track your progress and save your favorite content.</p>
+                        </div>
+                        <div class="faq-card glass">
+                            <h3><i class="fas fa-plus"></i> Can I download the study materials?</h3>
+                            <p>Yes, most study materials including PDFs and practice questions can be downloaded for offline access. Video content is available for streaming.</p>
+                        </div>
+                        <div class="faq-card glass">
+                            <h3><i class="fas fa-plus"></i> Are there any time limitations?</h3>
+                            <p>No, you can access the free resources at any time and learn at your own pace. There are no time restrictions.</p>
+                        </div>
+                        <div class="faq-card glass">
+                            <h3><i class="fas fa-plus"></i> Can I get certificates for free courses?</h3>
+                            <p>Yes, you can earn certificates for completing free courses. However, some advanced certifications may require a small fee.</p>
+                        </div>
+                        <div class="faq-card glass">
+                            <h3><i class="fas fa-plus"></i> How often are the resources updated?</h3>
+                            <p>Our free resources are regularly updated to include the latest information and best practices in each field.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="cta-section">
+                <div class="container">
+                    <h2>Ready to Start Learning?</h2>
+                    <p>Join thousands of learners who are already benefiting from our free resources.</p>
+                    <div class="cta-buttons">
+                        <a href="auth.html" class="btn-primary">Create Free Account</a>
+                        <a href="contact.html" class="btn-secondary">Contact Us</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>About PrepArena</h3>
+                    <p>Your one-stop platform for comprehensive preparation for coding interviews, competitive exams, and career growth.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+                        <li><a href="courses.html"><i class="fas fa-chevron-right"></i> Courses</a></li>
+                        <li><a href="free-courses.html"><i class="fas fa-chevron-right"></i> Free Courses</a></li>
+                        <li><a href="jobs.html"><i class="fas fa-chevron-right"></i> Jobs</a></li>
+                        <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> +1 234 567 8900</li>
+                        <li><i class="fas fa-envelope"></i> info@preparena.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Tech Street, Silicon Valley</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 PrepArena. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 

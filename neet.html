@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEET Preparation - PrepArena</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav-container">
+            <div class="logo">PrepArena</div>
+            <div class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#features">Features</a></li>
+                <li><a href="index.html#courses">Courses</a></li>
+                <li><a href="coding-interview.html">Coding Prep</a></li>
+                <li><a href="#" class="btn-primary">Sign In</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="neet-page">
+        <section class="page-hero">
+            <div class="hero-content">
+                <h1>NEET Preparation</h1>
+                <p>Comprehensive study materials and practice questions for NEET aspirants</p>
+            </div>
+        </section>
+
+        <section class="resources-section">
+            <div class="container">
+                <h2 class="section-title">Study Materials</h2>
+                <div class="resources-grid">
+                    <div class="resource-card">
+                        <i class="fas fa-dna"></i>
+                        <h3>Biology Complete Guide</h3>
+                        <p>Comprehensive coverage of all Biology topics with diagrams and notes</p>
+                        <a href="resources/biology-guide.pdf" class="btn-secondary" download>
+                            <i class="fas fa-download"></i> Download PDF
+                        </a>
+                    </div>
+                    <div class="resource-card">
+                        <i class="fas fa-flask"></i>
+                        <h3>Chemistry Formula Book</h3>
+                        <p>Important reactions and mechanisms for quick revision</p>
+                        <a href="resources/neet-chemistry.pdf" class="btn-secondary" download>
+                            <i class="fas fa-download"></i> Download PDF
+                        </a>
+                    </div>
+                    <div class="resource-card">
+                        <i class="fas fa-atom"></i>
+                        <h3>Physics Solved Papers</h3>
+                        <p>Previous years' questions with detailed solutions</p>
+                        <a href="resources/neet-physics.pdf" class="btn-secondary" download>
+                            <i class="fas fa-download"></i> Download PDF
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="practice-questions">
+            <div class="container">
+                <h2 class="section-title">Practice Questions</h2>
+                <div class="subject-filter">
+                    <button class="filter-btn active" data-subject="all">All Subjects</button>
+                    <button class="filter-btn" data-subject="biology">Biology</button>
+                    <button class="filter-btn" data-subject="chemistry">Chemistry</button>
+                    <button class="filter-btn" data-subject="physics">Physics</button>
+                </div>
+
+                <div class="questions-container">
+                    <!-- Biology Questions -->
+                    <div class="question-card" data-subject="biology">
+                        <div class="question-header">
+                            <span class="subject-tag biology">Biology</span>
+                            <h3>Cell Biology</h3>
+                        </div>
+                        <p>Which organelle is known as the powerhouse of the cell and why?</p>
+                        <div class="solution-steps hidden">
+                            <h4>Solution:</h4>
+                            <ol>
+                                <li>Mitochondria is known as the powerhouse of the cell</li>
+                                <li>It produces ATP through cellular respiration</li>
+                                <li>Contains inner and outer membranes</li>
+                                <li>Has its own DNA and ribosomes</li>
+                            </ol>
+                        </div>
+                        <button class="btn-secondary show-solution">Show Solution</button>
+                    </div>
+
+                    <div class="question-card" data-subject="biology">
+                        <div class="question-header">
+                            <span class="subject-tag biology">Biology</span>
+                            <h3>Genetics</h3>
+                        </div>
+                        <p>In a dihybrid cross between AABB × aabb, what will be the phenotypic ratio in F2 generation?</p>
+                        <div class="solution-steps hidden">
+                            <h4>Solution:</h4>
+                            <ol>
+                                <li>F1 generation will be AaBb (all heterozygous)</li>
+                                <li>F2 will show independent assortment</li>
+                                <li>Phenotypic ratio: 9:3:3:1</li>
+                                <li>This demonstrates Mendel's Law of Independent Assortment</li>
+                            </ol>
+                        </div>
+                        <button class="btn-secondary show-solution">Show Solution</button>
+                    </div>
+
+                    <div class="question-card" data-subject="biology">
+                        <div class="question-header">
+                            <span class="subject-tag biology">Biology</span>
+                            <h3>Plant Physiology</h3>
+                        </div>
+                        <p>What is the role of abscisic acid in plants?</p>
+                        <div class="solution-steps hidden">
+                            <h4>Solution:</h4>
+                            <ol>
+                                <li>Promotes seed dormancy</li>
+                                <li>Causes stomatal closure during water stress</li>
+                                <li>Inhibits growth</li>
+                                <li>Promotes leaf senescence and abscission</li>
+                            </ol>
+                        </div>
+                        <button class="btn-secondary show-solution">Show Solution</button>
+                    </div>
+
+                    <div class="question-card" data-subject="biology">
+                        <div class="question-header">
+                            <span class="subject-tag biology">Biology</span>
+                            <h3>Human Physiology</h3>
+                        </div>
+                        <p>Explain the process of muscle contraction with reference to the sliding filament theory.</p>
+                        <div class="solution-steps hidden">
+                            <h4>Solution:</h4>
+                            <ol>
+                                <li>Calcium ions bind to troponin</li>
+                                <li>Tropomyosin moves, exposing binding sites on actin</li>
+                                <li>Myosin heads bind to actin forming cross-bridges</li>
+                                <li>ATP hydrolysis powers the power stroke</li>
+                                <li>Sarcomere shortens causing contraction</li>
+                            </ol>
+                        </div>
+                        <button class="btn-secondary show-solution">Show Solution</button>
+                    </div>
+
+                    <!-- Chemistry Questions -->
+                    <div class="question-card" data-subject="chemistry">
+                        <div class="question-header">
+                            <span class="subject-tag chemistry">Chemistry</span>
+                            <h3>Organic Chemistry</h3>
+                        </div>
+                        <p>What is the major product formed when ethanol reacts with concentrated H₂SO₄ at 443K?</p>
+                        <div class="solution-steps hidden">
+                            <h4>Solution:</h4>
+                            <ol>
+                                <li>This is a dehydration reaction</li>
+                                <li>CH₃CH₂OH → CH₂=CH₂ + H₂O</li>
+                                <li>Major product: Ethene</li>
+                                <li>H₂SO₄ acts as a dehydrating agent</li>
+                            </ol>
+                        </div>
+                        <button class="btn-secondary show-solution">Show Solution</button>
+                    </div>
+
+                    <div class="question-card" data-subject="chemistry">
+                        <div class="question-header">
+                            <span class="subject-tag chemistry">Chemistry</span>
+                            <h3>Chemical Bonding</h3>
+                        </div>
+                        <p>Why is the boiling point of water higher than that of H₂S despite both having similar molecular mass?</p>
+                        <div class="solution-steps hidden">
+                            <h4>Solution:</h4>
+                            <ol>
+                                <li>Water molecules form hydrogen bonds</li>
+                                <li>H₂S molecules have weak van der Waals forces</li>
+                                <li>Hydrogen bonds are stronger than van der Waals forces</li>
+                                <li>More energy required to break H-bonds in water</li>
+                            </ol>
+                        </div>
+                        <button class="btn-secondary show-solution">Show Solution</button>
+                    </div>
+
+                    <div class="question-card" data-subject="chemistry">
+                        <div class="question-header">
+                            <span class="subject-tag chemistry">Chemistry</span>
+                            <h3>Coordination Chemistry</h3>
+                        </div>
+                        <p>What is the IUPAC name of [Co(NH₃)₄Cl₂]Cl?</p>
+                        <div class="solution-steps hidden">
+                            <h4>Solution:</h4>
+                            <ol>
+                                <li>Co is in +3 oxidation state</li>
+                                <li>4 NH₃ ligands and 2 Cl⁻ ligands are coordinated</li>
+                                <li>1 Cl⁻ is outside the coordination sphere</li>
+                                <li>IUPAC name: Tetraamminedichlorocobalt(III) chloride</li>
+                            </ol>
+                        </div>
+                        <button class="btn-secondary show-solution">Show Solution</button>
+                    </div>
+
+                    <!-- Physics Questions -->
+                    <div class="question-card" data-subject="physics">
+                        <div class="question-header">
+                            <span class="subject-tag physics">Physics</span>
+                            <h3>Human Eye</h3>
+                        </div>
+                        <p>Calculate the power of a corrective lens needed for a person whose far point is 80cm.</p>
+                        <div class="solution-steps hidden">
+                            <h4>Solution:</h4>
+                            <ol>
+                                <li>For myopia, power = -1/far point (in meters)</li>
+                                <li>Far point = 80cm = 0.8m</li>
+                                <li>Power = -1/0.8</li>
+                                <li>Power = -1.25 D</li>
+                            </ol>
+                        </div>
+                        <button class="btn-secondary show-solution">Show Solution</button>
+                    </div>
+
+                    <div class="question-card" data-subject="physics">
+                        <div class="question-header">
+                            <span class="subject-tag physics">Physics</span>
+                            <h3>Wave Optics</h3>
+                        </div>
+                        <p>In Young's double-slit experiment, if the wavelength of light is 500nm and the distance between slits is 0.1mm, calculate the fringe width when the screen is 1m away.</p>
+                        <div class="solution-steps hidden">
+                            <h4>Solution:</h4>
+                            <ol>
+                                <li>Fringe width β = λD/d</li>
+                                <li>λ = 500 × 10⁻⁹m</li>
+                                <li>D = 1m</li>
+                                <li>d = 0.1 × 10⁻³m</li>
+                                <li>β = (500 × 10⁻⁹ × 1)/(0.1 × 10⁻³)</li>
+                                <li>β = 5 × 10⁻³m = 5mm</li>
+                            </ol>
+                        </div>
+                        <button class="btn-secondary show-solution">Show Solution</button>
+                    </div>
+
+                    <div class="question-card" data-subject="physics">
+                        <div class="question-header">
+                            <span class="subject-tag physics">Physics</span>
+                            <h3>Modern Physics</h3>
+                        </div>
+                        <p>Calculate the de Broglie wavelength of an electron accelerated through a potential difference of 100V.</p>
+                        <div class="solution-steps hidden">
+                            <h4>Solution:</h4>
+                            <ol>
+                                <li>λ = h/√(2meV)</li>
+                                <li>h = 6.626 × 10⁻³⁴ Js</li>
+                                <li>m = 9.1 × 10⁻³¹ kg</li>
+                                <li>e = 1.6 × 10⁻¹⁹ C</li>
+                                <li>V = 100V</li>
+                                <li>λ = 1.23 × 10⁻¹⁰m</li>
+                            </ol>
+                        </div>
+                        <button class="btn-secondary show-solution">Show Solution</button>
+                    </div>
+
+                    <!-- Continue with more questions... -->
+                </div>
+            </div>
+        </section>
+
+        <section class="study-tips">
+            <div class="container">
+                <h2 class="section-title">NEET Preparation Tips</h2>
+                <div class="tips-grid">
+                    <div class="tip-card">
+                        <i class="fas fa-clock"></i>
+                        <h3>Time Management</h3>
+                        <ul>
+                            <li>Create subject-wise study schedule</li>
+                            <li>Practice NEET pattern questions</li>
+                            <li>Focus on NCERT thoroughly</li>
+                            <li>Regular revision of diagrams</li>
+                        </ul>
+                    </div>
+                    <div class="tip-card">
+                        <i class="fas fa-book"></i>
+                        <h3>Study Strategy</h3>
+                        <ul>
+                            <li>Master NCERT content</li>
+                            <li>Practice previous year papers</li>
+                            <li>Learn important diagrams</li>
+                            <li>Focus on application-based questions</li>
+                        </ul>
+                    </div>
+                    <div class="tip-card">
+                        <i class="fas fa-bullseye"></i>
+                        <h3>Exam Techniques</h3>
+                        <ul>
+                            <li>Read questions carefully</li>
+                            <li>Attempt known questions first</li>
+                            <li>Don't leave questions unanswered</li>
+                            <li>Revise before final submission</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>PrepArena</h3>
+                <p>Your success is our priority. Join thousands of successful students who achieved their goals with PrepArena.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="index.html#courses"><i class="fas fa-graduation-cap"></i> Courses</a></li>
+                    <li><a href="coding-interview.html"><i class="fas fa-laptop-code"></i> Coding Prep</a></li>
+                    <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect With Us</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 

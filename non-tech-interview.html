@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Non-Tech Interview Questions - PrepArena</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav-container">
+            <div class="logo">PrepArena</div>
+            <div class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#features">Features</a></li>
+                <li><a href="index.html#courses">Courses</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+                <li><a href="#" class="btn-primary">Sign In</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="non-tech-interview-page">
+        <section class="page-hero">
+            <div class="hero-content">
+                <h1>Non-Tech Interview Questions</h1>
+                <p>Master behavioral and situational questions for your next interview</p>
+            </div>
+        </section>
+
+        <section class="questions-section">
+            <div class="container">
+                <div class="filters">
+                    <div class="category-filter">
+                        <button class="filter-btn active" data-category="all">All Categories</button>
+                        <button class="filter-btn" data-category="behavioral">Behavioral</button>
+                        <button class="filter-btn" data-category="situational">Situational</button>
+                        <button class="filter-btn" data-category="strengths">Strengths & Weaknesses</button>
+                    </div>
+                    <div class="topic-filter">
+                        <button class="filter-btn active" data-topic="all">All Topics</button>
+                        <button class="filter-btn" data-topic="leadership">Leadership</button>
+                        <button class="filter-btn" data-topic="teamwork">Teamwork</button>
+                        <button class="filter-btn" data-topic="communication">Communication</button>
+                        <button class="filter-btn" data-topic="problem-solving">Problem Solving</button>
+                        <button class="filter-btn" data-topic="adaptability">Adaptability</button>
+                    </div>
+                </div>
+
+                <div class="questions-container">
+                    <!-- Behavioral Questions -->
+                    <div class="question-card" data-category="behavioral" data-topic="leadership">
+                        <div class="question-header">
+                            <span class="category-tag">Behavioral</span>
+                            <span class="topic-tag">Leadership</span>
+                            <h3>Tell me about a time when you had to lead a team through a difficult project.</h3>
+                        </div>
+                        <div class="question-content">
+                            <p>This question assesses your leadership experience and how you handle challenging situations.</p>
+                            <div class="example">
+                                <h4>Example Response:</h4>
+                                <p>"In my previous role, I led a team of five developers on a critical project with a tight deadline. We faced several technical challenges and team coordination issues. Here's how I handled it:</p>
+                                <ul>
+                                    <li>First, I organized daily stand-up meetings to track progress and address blockers</li>
+                                    <li>I created a detailed project timeline and assigned tasks based on team members' strengths</li>
+                                    <li>When we encountered technical issues, I facilitated brainstorming sessions to find solutions</li>
+                                    <li>I maintained open communication with stakeholders and provided regular updates</li>
+                                </ul>
+                                <p>As a result, we completed the project on time and received positive feedback from the client."</p>
+                            </div>
+                            <button class="btn-secondary show-solution">Show Tips</button>
+                            <div class="solution hidden">
+                                <h4>Answer Tips:</h4>
+                                <div class="solution-explanation">
+                                    <p>1. Use the STAR method (Situation, Task, Action, Result)</p>
+                                    <p>2. Focus on specific actions you took as a leader</p>
+                                    <p>3. Highlight measurable outcomes and positive results</p>
+                                    <p>4. Demonstrate your problem-solving and communication skills</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Situational Questions -->
+                    <div class="question-card" data-category="situational" data-topic="problem-solving">
+                        <div class="question-header">
+                            <span class="category-tag">Situational</span>
+                            <span class="topic-tag">Problem Solving</span>
+                            <h3>How would you handle a situation where a team member is consistently missing deadlines?</h3>
+                        </div>
+                        <div class="question-content">
+                            <p>This question evaluates your approach to handling performance issues and maintaining team productivity.</p>
+                            <div class="example">
+                                <h4>Example Response:</h4>
+                                <p>"I would approach this situation systematically:</p>
+                                <ul>
+                                    <li>First, I would have a private conversation with the team member to understand any underlying issues</li>
+                                    <li>I would review their workload and current commitments to identify potential bottlenecks</li>
+                                    <li>I would work with them to create a realistic action plan with clear milestones</li>
+                                    <li>I would set up regular check-ins to monitor progress and provide support</li>
+                                    <li>If the issue persists, I would document the situation and involve HR if necessary</li>
+                                </ul>
+                                <p>The goal would be to help the team member improve while maintaining project timelines."</p>
+                            </div>
+                            <button class="btn-secondary show-solution">Show Tips</button>
+                            <div class="solution hidden">
+                                <h4>Answer Tips:</h4>
+                                <div class="solution-explanation">
+                                    <p>1. Show empathy while maintaining professionalism</p>
+                                    <p>2. Demonstrate a structured approach to problem-solving</p>
+                                    <p>3. Focus on constructive solutions rather than punitive measures</p>
+                                    <p>4. Highlight your communication and conflict resolution skills</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Strengths & Weaknesses -->
+                    <div class="question-card" data-category="strengths" data-topic="adaptability">
+                        <div class="question-header">
+                            <span class="category-tag">Strengths & Weaknesses</span>
+                            <span class="topic-tag">Adaptability</span>
+                            <h3>What is your greatest strength and how has it helped you in your career?</h3>
+                        </div>
+                        <div class="question-content">
+                            <p>This question allows you to showcase your key strengths and demonstrate their practical application.</p>
+                            <div class="example">
+                                <h4>Example Response:</h4>
+                                <p>"My greatest strength is adaptability. In my current role, I've demonstrated this in several ways:</p>
+                                <ul>
+                                    <li>When our team had to transition to remote work, I quickly adapted to new collaboration tools and helped others do the same</li>
+                                    <li>I've successfully managed multiple projects with different technologies and methodologies</li>
+                                    <li>I'm comfortable working with diverse teams and adjusting my communication style accordingly</li>
+                                    <li>I actively seek feedback and use it to improve my performance</li>
+                                </ul>
+                                <p>This adaptability has helped me thrive in fast-paced environments and take on new challenges confidently."</p>
+                            </div>
+                            <button class="btn-secondary show-solution">Show Tips</button>
+                            <div class="solution hidden">
+                                <h4>Answer Tips:</h4>
+                                <div class="solution-explanation">
+                                    <p>1. Choose a strength relevant to the role</p>
+                                    <p>2. Provide specific examples of how you've used this strength</p>
+                                    <p>3. Show how the strength has contributed to positive outcomes</p>
+                                    <p>4. Demonstrate self-awareness and growth mindset</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>PrepArena</h3>
+                <p>Your success is our priority. Join thousands of successful students who achieved their goals with PrepArena.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#features">Features</a></li>
+                    <li><a href="index.html#courses">Courses</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect With Us</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 PrepArena. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="non-tech-interview.js"></script>
+</body>
+</html> 

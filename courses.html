@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses - PrepArena</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="main-container">
+        <header class="header glass">
+            <nav class="nav-container">
+                <div class="logo">PrepArena</div>
+                <div class="nav-toggle" id="navToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle">
+                            Features <i class="fas fa-chevron-down"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="coding-interview.html">
+                                <i class="fas fa-laptop-code"></i>
+                                Coding Interview Prep
+                            </a></li>
+                            <li><a href="jee-mains.html">
+                                <i class="fas fa-graduation-cap"></i>
+                                JEE Mains
+                            </a></li>
+                            <li><a href="neet-preparation.html">
+                                <i class="fas fa-heartbeat"></i>
+                                NEET Preparation
+                            </a></li>
+                            <li><a href="professional-interview.html">
+                                <i class="fas fa-briefcase"></i>
+                                Professional Interview
+                            </a></li>
+                        </ul>
+                    </li>
+                    <li><a href="courses.html" class="active">Courses</a></li>
+                    <li><a href="jobs.html">Jobs</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="auth.html" class="btn-primary">Sign In</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section class="page-hero">
+                <div class="hero-content">
+                    <h1>Our Courses</h1>
+                    <p>Comprehensive preparation programs designed by experts to help you achieve your goals</p>
+                </div>
+            </section>
+
+            <section class="course-categories">
+                <div class="container">
+                    <div class="category-filter">
+                        <button class="filter-btn active" data-category="all">
+                            <i class="fas fa-th-large"></i> All Courses
+                        </button>
+                        <button class="filter-btn" data-category="exam">
+                            <i class="fas fa-graduation-cap"></i> Entrance Exams
+                        </button>
+                        <button class="filter-btn" data-category="interview">
+                            <i class="fas fa-laptop-code"></i> Interview Prep
+                        </button>
+                        <button class="filter-btn" data-category="skill">
+                            <i class="fas fa-tools"></i> Skill Development
+                        </button>
+                    </div>
+
+                    <div class="courses-grid">
+                        <!-- Coding Interview Course -->
+                        <div class="course-card glass" data-category="interview">
+                            <div class="course-image coding-bg"></div>
+                            <span class="course-tag">Most Popular</span>
+                            <span class="course-price">₹4999</span>
+                            <div class="course-content">
+                                <h3>Coding Interview Prep</h3>
+                                <p>Master data structures, algorithms, and system design with our comprehensive program.</p>
+                                <ul class="course-features">
+                                    <li>500+ coding problems with solutions</li>
+                                    <li>Live mock interviews with experts</li>
+                                    <li>System design workshops</li>
+                                    <li>Video explanations & solutions</li>
+                                    <li>Interview preparation roadmap</li>
+                                </ul>
+                                <div class="course-stats">
+                                    <div class="stat">
+                                        <i class="fas fa-users"></i>
+                                        <span>10K+ Students</span>
+                                    </div>
+                                    <div class="stat">
+                                        <i class="fas fa-star"></i>
+                                        <span>4.8/5 Rating</span>
+                                    </div>
+                                </div>
+                                <a href="coding-interview.html" class="btn-secondary">Start Learning <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+
+                        <!-- JEE Mains Course -->
+                        <div class="course-card glass" data-category="exam">
+                            <div class="course-image jee-bg"></div>
+                            <span class="course-tag">High Success Rate</span>
+                            <span class="course-price">₹5999</span>
+                            <div class="course-content">
+                                <h3>JEE Mains Preparation</h3>
+                                <p>Comprehensive preparation program designed by IIT toppers and experienced faculty.</p>
+                                <ul class="course-features">
+                                    <li>Topic-wise video lectures</li>
+                                    <li>Previous year papers analysis</li>
+                                    <li>Live doubt solving sessions</li>
+                                    <li>Mock tests with analysis</li>
+                                    <li>Performance tracking system</li>
+                                </ul>
+                                <div class="course-stats">
+                                    <div class="stat">
+                                        <i class="fas fa-users"></i>
+                                        <span>8K+ Students</span>
+                                    </div>
+                                    <div class="stat">
+                                        <i class="fas fa-star"></i>
+                                        <span>4.7/5 Rating</span>
+                                    </div>
+                                </div>
+                                <a href="jee-mains.html" class="btn-secondary">Explore Course <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+
+                        <!-- NEET Course -->
+                        <div class="course-card glass" data-category="exam">
+                            <div class="course-image neet-bg"></div>
+                            <span class="course-tag">Comprehensive</span>
+                            <span class="course-price">₹5999</span>
+                            <div class="course-content">
+                                <h3>NEET Preparation</h3>
+                                <p>Expert-designed program covering complete NEET syllabus with focused preparation strategy.</p>
+                                <ul class="course-features">
+                                    <li>Subject-wise study material</li>
+                                    <li>NCERT solutions & guides</li>
+                                    <li>Chapter-wise mock tests</li>
+                                    <li>Expert mentorship support</li>
+                                    <li>Medical entrance guidance</li>
+                                </ul>
+                                <div class="course-stats">
+                                    <div class="stat">
+                                        <i class="fas fa-users"></i>
+                                        <span>7K+ Students</span>
+                                    </div>
+                                    <div class="stat">
+                                        <i class="fas fa-star"></i>
+                                        <span>4.9/5 Rating</span>
+                                    </div>
+                                </div>
+                                <a href="neet-preparation.html" class="btn-secondary">Explore Course <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+
+                        <!-- GATE Course -->
+                        <div class="course-card glass" data-category="exam">
+                            <div class="course-image gate-bg"></div>
+                            <span class="course-tag">New</span>
+                            <span class="course-price">₹6999</span>
+                            <div class="course-content">
+                                <h3>GATE Exam Preparation</h3>
+                                <p>Complete preparation course for GATE Computer Science with specialized focus on key topics.</p>
+                                <ul class="course-features">
+                                    <li>Subject-wise comprehensive modules</li>
+                                    <li>Previous year papers with solutions</li>
+                                    <li>Expert faculty support</li>
+                                    <li>Weekly practice tests</li>
+                                    <li>Interview preparation for PSUs</li>
+                                </ul>
+                                <div class="course-stats">
+                                    <div class="stat">
+                                        <i class="fas fa-users"></i>
+                                        <span>5K+ Students</span>
+                                    </div>
+                                    <div class="stat">
+                                        <i class="fas fa-star"></i>
+                                        <span>4.6/5 Rating</span>
+                                    </div>
+                                </div>
+                                <a href="#" class="btn-secondary">Explore Course <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+
+                        <!-- Data Science Course -->
+                        <div class="course-card glass" data-category="skill">
+                            <div class="course-image data-science-bg"></div>
+                            <span class="course-tag">Trending</span>
+                            <span class="course-price">₹7999</span>
+                            <div class="course-content">
+                                <h3>Data Science Bootcamp</h3>
+                                <p>Master the skills required to become a data scientist with hands-on projects and real-world datasets.</p>
+                                <ul class="course-features">
+                                    <li>Python programming fundamentals</li>
+                                    <li>Statistical analysis & visualization</li>
+                                    <li>Machine learning algorithms</li>
+                                    <li>Deep learning introduction</li>
+                                    <li>Industry-oriented capstone projects</li>
+                                </ul>
+                                <div class="course-stats">
+                                    <div class="stat">
+                                        <i class="fas fa-users"></i>
+                                        <span>3K+ Students</span>
+                                    </div>
+                                    <div class="stat">
+                                        <i class="fas fa-star"></i>
+                                        <span>4.8/5 Rating</span>
+                                    </div>
+                                </div>
+                                <a href="#" class="btn-secondary">Explore Course <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+
+                        <!-- Product Management Course -->
+                        <div class="course-card glass" data-category="skill">
+                            <div class="course-image product-bg"></div>
+                            <span class="course-tag">Career Booster</span>
+                            <span class="course-price">₹8999</span>
+                            <div class="course-content">
+                                <h3>Product Management Masterclass</h3>
+                                <p>Learn the skills required to excel as a product manager in technology companies.</p>
+                                <ul class="course-features">
+                                    <li>Product development lifecycle</li>
+                                    <li>User research & prototyping</li>
+                                    <li>Agile methodologies</li>
+                                    <li>Data-driven decision making</li>
+                                    <li>Product launch strategies</li>
+                                </ul>
+                                <div class="course-stats">
+                                    <div class="stat">
+                                        <i class="fas fa-users"></i>
+                                        <span>2K+ Students</span>
+                                    </div>
+                                    <div class="stat">
+                                        <i class="fas fa-star"></i>
+                                        <span>4.7/5 Rating</span>
+                                    </div>
+                                </div>
+                                <a href="#" class="btn-secondary">Explore Course <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+
+                        <!-- Professional Interview Course -->
+                        <div class="course-card glass" data-category="interview">
+                            <div class="course-image interview-bg"></div>
+                            <span class="course-tag">Essential</span>
+                            <span class="course-price">₹3999</span>
+                            <div class="course-content">
+                                <h3>Professional Interview Preparation</h3>
+                                <p>Comprehensive training for excelling in HR, behavioral, and situational interviews.</p>
+                                <ul class="course-features">
+                                    <li>Interview question bank & answers</li>
+                                    <li>Resume building workshops</li>
+                                    <li>Mock interviews with feedback</li>
+                                    <li>Salary negotiation techniques</li>
+                                    <li>LinkedIn profile optimization</li>
+                                </ul>
+                                <div class="course-stats">
+                                    <div class="stat">
+                                        <i class="fas fa-users"></i>
+                                        <span>4K+ Students</span>
+                                    </div>
+                                    <div class="stat">
+                                        <i class="fas fa-star"></i>
+                                        <span>4.5/5 Rating</span>
+                                    </div>
+                                </div>
+                                <a href="professional-interview.html" class="btn-secondary">Start Learning <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+
+                        <!-- Full Stack Development Course -->
+                        <div class="course-card glass" data-category="skill">
+                            <div class="course-image fullstack-bg"></div>
+                            <span class="course-tag">In Demand</span>
+                            <span class="course-price">₹9999</span>
+                            <div class="course-content">
+                                <h3>Full Stack Web Development</h3>
+                                <p>Master both frontend and backend development with practical projects and industry best practices.</p>
+                                <ul class="course-features">
+                                    <li>HTML, CSS, JavaScript fundamentals</li>
+                                    <li>React.js for frontend development</li>
+                                    <li>Node.js & Express backend</li>
+                                    <li>Database management with MongoDB</li>
+                                    <li>Real-world applications portfolio</li>
+                                </ul>
+                                <div class="course-stats">
+                                    <div class="stat">
+                                        <i class="fas fa-users"></i>
+                                        <span>6K+ Students</span>
+                                    </div>
+                                    <div class="stat">
+                                        <i class="fas fa-star"></i>
+                                        <span>4.8/5 Rating</span>
+                                    </div>
+                                </div>
+                                <a href="#" class="btn-secondary">Explore Course <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="why-choose-us">
+                <div class="container">
+                    <h2 class="section-title">Why Choose PrepArena?</h2>
+                    <div class="features-grid">
+                        <div class="feature-card glass">
+                            <i class="fas fa-chalkboard-teacher"></i>
+                            <h3>Expert Faculty</h3>
+                            <p>Learn from industry professionals and academic experts with years of teaching experience.</p>
+                        </div>
+                        <div class="feature-card glass">
+                            <i class="fas fa-laptop"></i>
+                            <h3>Interactive Learning</h3>
+                            <p>Engage with our interactive platform featuring quizzes, challenges, and practical exercises.</p>
+                        </div>
+                        <div class="feature-card glass">
+                            <i class="fas fa-chart-line"></i>
+                            <h3>Progress Tracking</h3>
+                            <p>Monitor your progress with detailed analytics and personalized performance insights.</p>
+                        </div>
+                        <div class="feature-card glass">
+                            <i class="fas fa-users"></i>
+                            <h3>Community Support</h3>
+                            <p>Join a thriving community of learners and get support from peers and mentors.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="testimonials">
+                <div class="container">
+                    <h2 class="section-title">What Our Students Say</h2>
+                    <div class="testimonial-slider">
+                        <div class="testimonial-card glass">
+                            <div class="testimonial-content">
+                                <i class="fas fa-quote-left"></i>
+                                <p>"PrepArena's JEE Mains course was instrumental in my success. The structured approach and quality study materials helped me secure a top rank."</p>
+                                <div class="testimonial-author">
+                                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Student">
+                                    <div>
+                                        <h4>Rahul Kumar</h4>
+                                        <p>IIT Delhi Student</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial-card glass">
+                            <div class="testimonial-content">
+                                <i class="fas fa-quote-left"></i>
+                                <p>"The coding interview preparation course helped me land my dream job at a top tech company. The practice problems and mock interviews were incredibly helpful!"</p>
+                                <div class="testimonial-author">
+                                    <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Student">
+                                    <div>
+                                        <h4>Priya Sharma</h4>
+                                        <p>Software Engineer</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial-card glass">
+                            <div class="testimonial-content">
+                                <i class="fas fa-quote-left"></i>
+                                <p>"NEET preparation became much easier with PrepArena's comprehensive study materials and expert guidance. I'm now pursuing my MBBS at a top medical college."</p>
+                                <div class="testimonial-author">
+                                    <img src="https://randomuser.me/api/portraits/men/62.jpg" alt="Student">
+                                    <div>
+                                        <h4>Amit Patel</h4>
+                                        <p>Medical Student</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="faq-section">
+                <div class="container">
+                    <h2 class="section-title">Frequently Asked Questions</h2>
+                    <div class="faq-grid">
+                        <div class="faq-card glass">
+                            <h3><i class="fas fa-plus"></i> How long do I have access to the course?</h3>
+                            <p>Once enrolled, you will have lifetime access to the course materials. You can study at your own pace and revisit the content whenever needed.</p>
+                        </div>
+                        <div class="faq-card glass">
+                            <h3><i class="fas fa-plus"></i> Are there any prerequisites for these courses?</h3>
+                            <p>Most courses are designed to accommodate learners at all levels. However, some advanced courses may require basic prerequisite knowledge, which will be clearly mentioned in the course description.</p>
+                        </div>
+                        <div class="faq-card glass">
+                            <h3><i class="fas fa-plus"></i> Can I get a refund if I'm not satisfied?</h3>
+                            <p>Yes, we offer a 7-day money-back guarantee for all our courses. If you're not satisfied with the content, you can request a full refund within 7 days of purchase.</p>
+                        </div>
+                        <div class="faq-card glass">
+                            <h3><i class="fas fa-plus"></i> How are the mock tests conducted?</h3>
+                            <p>Mock tests are conducted online through our platform. They are designed to simulate the actual exam environment and provide detailed performance analysis and feedback.</p>
+                        </div>
+                        <div class="faq-card glass">
+                            <h3><i class="fas fa-plus"></i> Do you provide placement assistance?</h3>
+                            <p>Yes, for career-oriented courses like coding interview preparation and data science, we provide placement assistance including resume building, interview preparation, and connections with our hiring partners.</p>
+                        </div>
+                        <div class="faq-card glass">
+                            <h3><i class="fas fa-plus"></i> Can I download the course materials for offline study?</h3>
+                            <p>Yes, most of our study materials, including PDFs, practice questions, and notes, can be downloaded for offline access. Video lectures are available for streaming only.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="cta-section">
+                <div class="container">
+                    <h2>Ready to Begin Your Learning Journey?</h2>
+                    <p>Join thousands of successful students who achieved their goals with PrepArena.</p>
+                    <div class="cta-buttons">
+                        <a href="auth.html" class="btn-primary">Sign Up Now</a>
+                        <a href="contact.html" class="btn-secondary">Contact Us</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>About PrepArena</h3>
+                    <p>Your one-stop platform for comprehensive preparation for coding interviews, competitive exams, and career growth.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+                        <li><a href="courses.html"><i class="fas fa-chevron-right"></i> Courses</a></li>
+                        <li><a href="jobs.html"><i class="fas fa-chevron-right"></i> Jobs</a></li>
+                        <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> +1 234 567 8900</li>
+                        <li><i class="fas fa-envelope"></i> info@preparena.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Tech Street, Silicon Valley</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 PrepArena. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 

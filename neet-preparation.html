@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEET Preparation - PrepArena</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav-container">
+            <div class="logo">PrepArena</div>
+            <div class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#features">Features</a></li>
+                <li><a href="index.html#courses">Courses</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+                <li><a href="#" class="btn-primary">Sign In</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="neet-preparation-page">
+        <section class="page-hero">
+            <div class="hero-content">
+                <h1>NEET Preparation</h1>
+                <p>Comprehensive study materials and practice questions for NEET preparation</p>
+            </div>
+        </section>
+
+        <section class="resources-section">
+            <div class="container">
+                <div class="subject-filters">
+                    <button class="filter-btn active" data-subject="all">All Subjects</button>
+                    <button class="filter-btn" data-subject="biology">Biology</button>
+                    <button class="filter-btn" data-subject="physics">Physics</button>
+                    <button class="filter-btn" data-subject="chemistry">Chemistry</button>
+                </div>
+
+                <div class="resources-grid">
+                    <!-- Biology Resources -->
+                    <div class="resource-card" data-subject="biology">
+                        <i class="fas fa-dna"></i>
+                        <h3>Biology</h3>
+                        <p>Complete coverage of botany and zoology with detailed explanations and diagrams.</p>
+                        <ul class="resource-features">
+                            <li>Topic-wise study materials</li>
+                            <li>Previous year papers with solutions</li>
+                            <li>Concept videos and animations</li>
+                            <li>Quick revision notes</li>
+                        </ul>
+                        <a href="#" class="btn-secondary">Start Learning</a>
+                    </div>
+
+                    <!-- Physics Resources -->
+                    <div class="resource-card" data-subject="physics">
+                        <i class="fas fa-atom"></i>
+                        <h3>Physics</h3>
+                        <p>Comprehensive study materials covering mechanics, thermodynamics, and more.</p>
+                        <ul class="resource-features">
+                            <li>Topic-wise practice questions</li>
+                            <li>Formula sheets</li>
+                            <li>Concept videos</li>
+                            <li>Numerical problem sets</li>
+                        </ul>
+                        <a href="#" class="btn-secondary">Start Learning</a>
+                    </div>
+
+                    <!-- Chemistry Resources -->
+                    <div class="resource-card" data-subject="chemistry">
+                        <i class="fas fa-flask"></i>
+                        <h3>Chemistry</h3>
+                        <p>Complete coverage of physical, organic, and inorganic chemistry.</p>
+                        <ul class="resource-features">
+                            <li>Reaction mechanisms</li>
+                            <li>Periodic table study</li>
+                            <li>Practice problems</li>
+                            <li>Topic-wise materials</li>
+                        </ul>
+                        <a href="#" class="btn-secondary">Start Learning</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="practice-questions">
+            <div class="container">
+                <h2>Practice Questions</h2>
+                <div class="questions-container">
+                    <!-- Biology Question -->
+                    <div class="question-card" data-subject="biology">
+                        <div class="question-header">
+                            <span class="subject-tag biology">Biology</span>
+                            <span class="difficulty medium">Medium</span>
+                            <h3>Cell Division: Mitosis</h3>
+                        </div>
+                        <div class="question-content">
+                            <p>Describe the stages of mitosis and explain the significance of each stage in cell division.</p>
+                            <div class="example">
+                                <h4>Answer:</h4>
+                                <div class="solution-steps">
+                                    <p>1. Prophase:</p>
+                                    <ul>
+                                        <li>Chromosomes condense and become visible</li>
+                                        <li>Nuclear envelope breaks down</li>
+                                        <li>Spindle fibers begin to form</li>
+                                    </ul>
+                                    <p>2. Metaphase:</p>
+                                    <ul>
+                                        <li>Chromosomes align at the equatorial plate</li>
+                                        <li>Spindle fibers attach to centromeres</li>
+                                    </ul>
+                                    <p>3. Anaphase:</p>
+                                    <ul>
+                                        <li>Sister chromatids separate</li>
+                                        <li>Chromosomes move to opposite poles</li>
+                                    </ul>
+                                    <p>4. Telophase:</p>
+                                    <ul>
+                                        <li>Nuclear envelope reforms</li>
+                                        <li>Chromosomes decondense</li>
+                                        <li>Cytokinesis begins</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <button class="btn-secondary show-solution">Show Explanation</button>
+                            <div class="solution hidden">
+                                <h4>Detailed Explanation:</h4>
+                                <div class="solution-explanation">
+                                    <p>1. Significance of each stage:</p>
+                                    <ul>
+                                        <li>Prophase: Prepares chromosomes for division</li>
+                                        <li>Metaphase: Ensures proper chromosome alignment</li>
+                                        <li>Anaphase: Separates genetic material</li>
+                                        <li>Telophase: Completes nuclear division</li>
+                                    </ul>
+                                    <p>2. Key concepts:</p>
+                                    <ul>
+                                        <li>Chromosome condensation and organization</li>
+                                        <li>Spindle apparatus formation</li>
+                                        <li>Genetic material distribution</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Physics Question -->
+                    <div class="question-card" data-subject="physics">
+                        <div class="question-header">
+                            <span class="subject-tag physics">Physics</span>
+                            <span class="difficulty hard">Hard</span>
+                            <h3>Work, Energy, and Power</h3>
+                        </div>
+                        <div class="question-content">
+                            <p>A block of mass 2 kg is pushed up an inclined plane of angle 30° with a force of 20 N. If the coefficient of friction is 0.2, calculate the work done in moving the block 5 m up the plane.</p>
+                            <div class="example">
+                                <h4>Solution:</h4>
+                                <div class="solution-steps">
+                                    <p>1. Components of forces:</p>
+                                    <ul>
+                                        <li>Normal force (N) = mg cosθ</li>
+                                        <li>Frictional force (f) = μN</li>
+                                        <li>Applied force (F) = 20 N</li>
+                                    </ul>
+                                    <p>2. Calculations:</p>
+                                    <ul>
+                                        <li>N = 2 × 9.8 × cos(30°) = 16.97 N</li>
+                                        <li>f = 0.2 × 16.97 = 3.39 N</li>
+                                        <li>Work done = (F - f) × d</li>
+                                        <li>Work done = (20 - 3.39) × 5 = 83.05 J</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <button class="btn-secondary show-solution">Show Explanation</button>
+                            <div class="solution hidden">
+                                <h4>Detailed Explanation:</h4>
+                                <div class="solution-explanation">
+                                    <p>1. Key concepts:</p>
+                                    <ul>
+                                        <li>Force components on inclined plane</li>
+                                        <li>Frictional force calculation</li>
+                                        <li>Work done against friction</li>
+                                    </ul>
+                                    <p>2. Important points:</p>
+                                    <ul>
+                                        <li>Consider both applied force and friction</li>
+                                        <li>Work is done against gravity and friction</li>
+                                        <li>Use proper sign conventions</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Chemistry Question -->
+                    <div class="question-card" data-subject="chemistry">
+                        <div class="question-header">
+                            <span class="subject-tag chemistry">Chemistry</span>
+                            <span class="difficulty medium">Medium</span>
+                            <h3>Chemical Bonding</h3>
+                        </div>
+                        <div class="question-content">
+                            <p>Explain the formation of NH₃ molecule using valence bond theory and hybridization.</p>
+                            <div class="example">
+                                <h4>Answer:</h4>
+                                <div class="solution-steps">
+                                    <p>1. Electronic configuration:</p>
+                                    <ul>
+                                        <li>N: 1s² 2s² 2p³</li>
+                                        <li>H: 1s¹</li>
+                                    </ul>
+                                    <p>2. Hybridization:</p>
+                                    <ul>
+                                        <li>N undergoes sp³ hybridization</li>
+                                        <li>Forms four sp³ hybrid orbitals</li>
+                                    </ul>
+                                    <p>3. Bond formation:</p>
+                                    <ul>
+                                        <li>Three sp³ orbitals form σ bonds with H</li>
+                                        <li>One sp³ orbital contains lone pair</li>
+                                    </ul>
+                                    <p>4. Molecular geometry:</p>
+                                    <ul>
+                                        <li>Tetrahedral electron geometry</li>
+                                        <li>Trigonal pyramidal molecular geometry</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <button class="btn-secondary show-solution">Show Explanation</button>
+                            <div class="solution hidden">
+                                <h4>Detailed Explanation:</h4>
+                                <div class="solution-explanation">
+                                    <p>1. Key concepts:</p>
+                                    <ul>
+                                        <li>Valence bond theory</li>
+                                        <li>Hybridization</li>
+                                        <li>Molecular geometry</li>
+                                    </ul>
+                                    <p>2. Important points:</p>
+                                    <ul>
+                                        <li>Role of lone pair in geometry</li>
+                                        <li>Bond angle considerations</li>
+                                        <li>Polarity of the molecule</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="study-tips">
+            <div class="container">
+                <h2>Study Tips</h2>
+                <div class="tips-grid">
+                    <div class="tip-card">
+                        <i class="fas fa-clock"></i>
+                        <h3>Time Management</h3>
+                        <ul>
+                            <li>Create a daily study schedule</li>
+                            <li>Allocate time for each subject</li>
+                            <li>Include regular breaks</li>
+                            <li>Practice time-based mock tests</li>
+                        </ul>
+                    </div>
+                    <div class="tip-card">
+                        <i class="fas fa-book"></i>
+                        <h3>Study Strategy</h3>
+                        <ul>
+                            <li>Start with NCERT textbooks</li>
+                            <li>Make concise notes</li>
+                            <li>Practice previous year papers</li>
+                            <li>Focus on weak areas</li>
+                        </ul>
+                    </div>
+                    <div class="tip-card">
+                        <i class="fas fa-brain"></i>
+                        <h3>Exam Preparation</h3>
+                        <ul>
+                            <li>Regular revision</li>
+                            <li>Mock test analysis</li>
+                            <li>Formula memorization</li>
+                            <li>Speed and accuracy practice</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>PrepArena</h3>
+                <p>Your success is our priority. Join thousands of successful students who achieved their goals with PrepArena.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#features">Features</a></li>
+                    <li><a href="index.html#courses">Courses</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect With Us</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 PrepArena. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="neet-preparation.js"></script>
+</body>
+</html> 

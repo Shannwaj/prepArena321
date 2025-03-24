@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JEE Mains Preparation - PrepArena</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism-tomorrow.min.css" rel="stylesheet" />
+</head>
+<body>
+    <header class="header">
+        <nav class="nav-container">
+            <div class="logo">PrepArena</div>
+            <div class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#features">Features</a></li>
+                <li><a href="index.html#courses">Courses</a></li>
+                <li><a href="coding-interview.html">Coding Prep</a></li>
+                <li><a href="#" class="btn-primary">Sign In</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="jee-mains-page">
+        <section class="page-hero">
+            <div class="hero-content">
+                <h1>JEE Mains Preparation</h1>
+                <p>Comprehensive study materials and practice questions for JEE Mains aspirants</p>
+            </div>
+        </section>
+
+        <section class="resources-section">
+            <div class="container">
+                <h2 class="section-title">Study Materials</h2>
+                <div class="resources-grid">
+                    <div class="resource-card">
+                        <i class="fas fa-atom"></i>
+                        <h3>Physics Complete Guide</h3>
+                        <p>Comprehensive coverage of all Physics topics with solved examples</p>
+                        <a href="resources/physics-guide.pdf" class="btn-secondary" download>
+                            <i class="fas fa-download"></i> Download PDF
+                        </a>
+                    </div>
+                    <div class="resource-card">
+                        <i class="fas fa-flask"></i>
+                        <h3>Chemistry Formula Book</h3>
+                        <p>Important formulas and reactions for quick revision</p>
+                        <a href="resources/chemistry-formulas.pdf" class="btn-secondary" download>
+                            <i class="fas fa-download"></i> Download PDF
+                        </a>
+                    </div>
+                    <div class="resource-card">
+                        <i class="fas fa-square-root-alt"></i>
+                        <h3>Mathematics Solved Papers</h3>
+                        <p>Previous years' questions with detailed solutions</p>
+                        <a href="resources/maths-solved.pdf" class="btn-secondary" download>
+                            <i class="fas fa-download"></i> Download PDF
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="practice-questions">
+            <div class="container">
+                <h2 class="section-title">Practice Questions</h2>
+                <div class="subject-filter">
+                    <button class="filter-btn active" data-subject="all">All Subjects</button>
+                    <button class="filter-btn" data-subject="physics">Physics</button>
+                    <button class="filter-btn" data-subject="chemistry">Chemistry</button>
+                    <button class="filter-btn" data-subject="maths">Mathematics</button>
+                </div>
+
+                <div class="questions-container">
+                    <!-- Physics Questions -->
+                    <div class="question-card" data-subject="physics">
+                        <div class="question-header">
+                            <span class="subject-tag physics">Physics</span>
+                            <h3>Kinematics</h3>
+                        </div>
+                        <p>A stone is thrown vertically upward with a velocity of 49 m/s. Calculate the maximum height reached by the stone. (g = 9.8 m/s²)</p>
+                        <div class="solution-steps hidden">
+                            <h4>Solution:</h4>
+                            <ol>
+                                <li>Using v² = u² + 2gh where v = 0 at max height</li>
+                                <li>0 = (49)² + 2(-9.8)h</li>
+                                <li>h = 49²/(2 × 9.8) = 122.5 meters</li>
+                            </ol>
+                        </div>
+                        <button class="btn-secondary show-solution">Show Solution</button>
+                    </div>
+
+                    <div class="question-card" data-subject="physics">
+                        <div class="question-header">
+                            <span class="subject-tag physics">Physics</span>
+                            <h3>Newton's Laws</h3>
+                        </div>
+                        <p>A block of mass 2 kg is placed on a rough horizontal surface with coefficient of friction 0.5. Find the force required to move the block. (g = 9.8 m/s²)</p>
+                        <div class="solution-steps hidden">
+                            <h4>Solution:</h4>
+                            <ol>
+                                <li>Normal force N = mg = 2 × 9.8 = 19.6 N</li>
+                                <li>Friction force f = μN = 0.5 × 19.6</li>
+                                <li>Required force = 9.8 N</li>
+                            </ol>
+                        </div>
+                        <button class="btn-secondary show-solution">Show Solution</button>
+                    </div>
+
+                    <div class="question-card" data-subject="physics">
+                        <div class="question-header">
+                            <span class="subject-tag physics">Physics</span>
+                            <h3>Circular Motion</h3>
+                        </div>
+                        <p>A particle moves in a circle of radius 2m with a constant speed of 4m/s. Calculate its centripetal acceleration.</p>
+                        <div class="solution-steps hidden">
+                            <h4>Solution:</h4>
+                            <ol>
+                                <li>Centripetal acceleration a = v²/r</li>
+                                <li>a = (4)²/2</li>
+                                <li>a = 8 m/s²</li>
+                            </ol>
+                        </div>
+                        <button class="btn-secondary show-solution">Show Solution</button>
+                    </div>
+
+                    <div class="question-card" data-subject="physics">
+                        <div class="question-header">
+                            <span class="subject-tag physics">Physics</span>
+                            <h3>Work and Energy</h3>
+                        </div>
+                        <p>A 2kg block slides down a frictionless inclined plane of height 5m. Calculate its velocity at the bottom.</p>
+                        <div class="solution-steps hidden">
+                            <h4>Solution:</h4>
+                            <ol>
+                                <li>Using conservation of energy: mgh = ½mv²</li>
+                                <li>2 × 9.8 × 5 = ½ × 2 × v²</li>
+                                <li>v = √(2gh) = √(2 × 9.8 × 5)</li>
+                                <li>v = 9.9 m/s</li>
+                            </ol>
+                        </div>
+                        <button class="btn-secondary show-solution">Show Solution</button>
+                    </div>
+
+                    <!-- Chemistry Questions -->
+                    <div class="question-card" data-subject="chemistry">
+                        <div class="question-header">
+                            <span class="subject-tag chemistry">Chemistry</span>
+                            <h3>Mole Concept</h3>
+                        </div>
+                        <p>Calculate the number of moles in 5.85g of sodium chloride (NaCl). [Atomic mass: Na = 23, Cl = 35.5]</p>
+                        <div class="solution-steps hidden">
+                            <h4>Solution:</h4>
+                            <ol>
+                                <li>Molar mass of NaCl = 23 + 35.5 = 58.5 g/mol</li>
+                                <li>Number of moles = Given mass/Molar mass</li>
+                                <li>= 5.85/58.5 = 0.1 moles</li>
+                            </ol>
+                        </div>
+                        <button class="btn-secondary show-solution">Show Solution</button>
+                    </div>
+
+                    <div class="question-card" data-subject="chemistry">
+                        <div class="question-header">
+                            <span class="subject-tag chemistry">Chemistry</span>
+                            <h3>Chemical Equilibrium</h3>
+                        </div>
+                        <p>For the reaction N₂ + 3H₂ ⇌ 2NH₃, if the equilibrium constant K<sub>c</sub> = 8, what is the value of K<sub>p</sub> at 400K?</p>
+                        <div class="solution-steps hidden">
+                            <h4>Solution:</h4>
+                            <ol>
+                                <li>K<sub>p</sub> = K<sub>c</sub>(RT)^Δn</li>
+                                <li>Δn = 2 - (1 + 3) = -2</li>
+                                <li>K<sub>p</sub> = 8(0.0821 × 400)^(-2)</li>
+                                <li>K<sub>p</sub> = 0.0366</li>
+                            </ol>
+                        </div>
+                        <button class="btn-secondary show-solution">Show Solution</button>
+                    </div>
+
+                    <div class="question-card" data-subject="chemistry">
+                        <div class="question-header">
+                            <span class="subject-tag chemistry">Chemistry</span>
+                            <h3>Electrochemistry</h3>
+                        </div>
+                        <p>Calculate the mass of copper deposited when a current of 2 amperes is passed through CuSO₄ solution for 30 minutes. (Atomic mass of Cu = 63.5, F = 96500 C/mol)</p>
+                        <div class="solution-steps hidden">
+                            <h4>Solution:</h4>
+                            <ol>
+                                <li>Time in seconds = 30 × 60 = 1800s</li>
+                                <li>Charge passed = Current × Time = 2 × 1800 = 3600C</li>
+                                <li>Mass = (Atomic mass × Current × Time)/(Valency × F)</li>
+                                <li>Mass = (63.5 × 3600)/(2 × 96500) = 1.18g</li>
+                            </ol>
+                        </div>
+                        <button class="btn-secondary show-solution">Show Solution</button>
+                    </div>
+
+                    <div class="question-card" data-subject="chemistry">
+                        <div class="question-header">
+                            <span class="subject-tag chemistry">Chemistry</span>
+                            <h3>Chemical Kinetics</h3>
+                        </div>
+                        <p>The half-life of a first-order reaction is 20 minutes. Calculate the rate constant.</p>
+                        <div class="solution-steps hidden">
+                            <h4>Solution:</h4>
+                            <ol>
+                                <li>For first-order reaction: t₁/₂ = 0.693/k</li>
+                                <li>20 = 0.693/k</li>
+                                <li>k = 0.693/20</li>
+                                <li>k = 0.03465 min⁻¹</li>
+                            </ol>
+                        </div>
+                        <button class="btn-secondary show-solution">Show Solution</button>
+                    </div>
+
+                    <!-- Mathematics Questions -->
+                    <div class="question-card" data-subject="maths">
+                        <div class="question-header">
+                            <span class="subject-tag maths">Mathematics</span>
+                            <h3>Calculus</h3>
+                        </div>
+                        <p>Find the derivative of f(x) = x·sin(x)</p>
+                        <div class="solution-steps hidden">
+                            <h4>Solution:</h4>
+                            <ol>
+                                <li>Using product rule: d/dx[u·v] = u·dv/dx + v·du/dx</li>
+                                <li>Here, u = x and v = sin(x)</li>
+                                <li>f'(x) = x·cos(x) + sin(x)</li>
+                            </ol>
+                        </div>
+                        <button class="btn-secondary show-solution">Show Solution</button>
+                    </div>
+
+                    <div class="question-card" data-subject="maths">
+                        <div class="question-header">
+                            <span class="subject-tag maths">Mathematics</span>
+                            <h3>Integration</h3>
+                        </div>
+                        <p>Evaluate ∫(x²+1)dx from 0 to 2</p>
+                        <div class="solution-steps hidden">
+                            <h4>Solution:</h4>
+                            <ol>
+                                <li>∫(x²+1)dx = (x³/3 + x)</li>
+                                <li>Upper limit: (8/3 + 2)</li>
+                                <li>Lower limit: (0 + 0)</li>
+                                <li>Result = 14/3</li>
+                            </ol>
+                        </div>
+                        <button class="btn-secondary show-solution">Show Solution</button>
+                    </div>
+
+                    <div class="question-card" data-subject="maths">
+                        <div class="question-header">
+                            <span class="subject-tag maths">Mathematics</span>
+                            <h3>Vectors</h3>
+                        </div>
+                        <p>Find the angle between vectors a = 2i + j + 2k and b = i + 2j + k</p>
+                        <div class="solution-steps hidden">
+                            <h4>Solution:</h4>
+                            <ol>
+                                <li>cos θ = (a·b)/(|a|·|b|)</li>
+                                <li>a·b = 2(1) + 1(2) + 2(1) = 6</li>
+                                <li>|a| = √(4 + 1 + 4) = 3</li>
+                                <li>|b| = √(1 + 4 + 1) = √6</li>
+                                <li>cos θ = 6/(3√6)</li>
+                                <li>θ = 35.26°</li>
+                            </ol>
+                        </div>
+                        <button class="btn-secondary show-solution">Show Solution</button>
+                    </div>
+
+                    <div class="question-card" data-subject="physics">
+                        <div class="question-header">
+                            <span class="subject-tag physics">Physics</span>
+                            <h3>Thermodynamics</h3>
+                        </div>
+                        <p>A heat engine operates between 400K and 300K. Calculate its maximum possible efficiency.</p>
+                        <div class="solution-steps hidden">
+                            <h4>Solution:</h4>
+                            <ol>
+                                <li>Maximum efficiency = 1 - T₂/T₁</li>
+                                <li>= 1 - 300/400</li>
+                                <li>= 1 - 0.75</li>
+                                <li>= 0.25 or 25%</li>
+                            </ol>
+                        </div>
+                        <button class="btn-secondary show-solution">Show Solution</button>
+                    </div>
+
+                    <div class="question-card" data-subject="chemistry">
+                        <div class="question-header">
+                            <span class="subject-tag chemistry">Chemistry</span>
+                            <h3>Organic Chemistry</h3>
+                        </div>
+                        <p>Predict the major product when propene reacts with HBr in the presence of peroxide.</p>
+                        <div class="solution-steps hidden">
+                            <h4>Solution:</h4>
+                            <ol>
+                                <li>This is anti-Markovnikov addition (peroxide effect)</li>
+                                <li>CH₃-CH=CH₂ + HBr → CH₃-CH₂-CH₂Br</li>
+                                <li>Major product: 1-bromopropane</li>
+                                <li>Mechanism: Free radical addition</li>
+                            </ol>
+                        </div>
+                        <button class="btn-secondary show-solution">Show Solution</button>
+                    </div>
+
+                    <div class="question-card" data-subject="maths">
+                        <div class="question-header">
+                            <span class="subject-tag maths">Mathematics</span>
+                            <h3>Complex Numbers</h3>
+                        </div>
+                        <p>Find all values of z satisfying z⁴ = 16</p>
+                        <div class="solution-steps hidden">
+                            <h4>Solution:</h4>
+                            <ol>
+                                <li>z = ⁴√16 × e^(2πik/4), k = 0,1,2,3</li>
+                                <li>|z| = 2</li>
+                                <li>z₁ = 2 (k=0)</li>
+                                <li>z₂ = 2i (k=1)</li>
+                                <li>z₃ = -2 (k=2)</li>
+                                <li>z₄ = -2i (k=3)</li>
+                            </ol>
+                        </div>
+                        <button class="btn-secondary show-solution">Show Solution</button>
+                    </div>
+
+                    <div class="question-card" data-subject="physics">
+                        <div class="question-header">
+                            <span class="subject-tag physics">Physics</span>
+                            <h3>Electrostatics</h3>
+                        </div>
+                        <p>Two point charges of 2μC and -2μC are placed 3cm apart. Calculate the electric field at the midpoint of the line joining them.</p>
+                        <div class="solution-steps hidden">
+                            <h4>Solution:</h4>
+                            <ol>
+                                <li>Distance from each charge to midpoint = 1.5cm</li>
+                                <li>E = k(q₁/r² - q₂/r²)</li>
+                                <li>E = (9×10⁹)(2×10⁻⁶)/(0.015)² - (-2×10⁻⁶)/(0.015)²</li>
+                                <li>E = 0 N/C (fields cancel out)</li>
+                            </ol>
+                        </div>
+                        <button class="btn-secondary show-solution">Show Solution</button>
+                    </div>
+
+                    <div class="question-card" data-subject="chemistry">
+                        <div class="question-header">
+                            <span class="subject-tag chemistry">Chemistry</span>
+                            <h3>Coordination Chemistry</h3>
+                        </div>
+                        <p>Calculate the magnetic moment of [Fe(H₂O)₆]³⁺ ion (Atomic number of Fe = 26)</p>
+                        <div class="solution-steps hidden">
+                            <h4>Solution:</h4>
+                            <ol>
+                                <li>Fe³⁺ has electronic configuration [Ar]3d⁵</li>
+                                <li>High spin complex: 5 unpaired electrons</li>
+                                <li>μ = √[n(n+2)] BM where n = number of unpaired electrons</li>
+                                <li>μ = √[5(5+2)] = √35 = 5.92 BM</li>
+                            </ol>
+                        </div>
+                        <button class="btn-secondary show-solution">Show Solution</button>
+                    </div>
+
+                    <div class="question-card" data-subject="maths">
+                        <div class="question-header">
+                            <span class="subject-tag maths">Mathematics</span>
+                            <h3>Probability</h3>
+                        </div>
+                        <p>A bag contains 4 red and 3 blue balls. Two balls are drawn at random. Find the probability that both are red.</p>
+                        <div class="solution-steps hidden">
+                            <h4>Solution:</h4>
+                            <ol>
+                                <li>Total number of ways = C(7,2) = 21</li>
+                                <li>Favorable outcomes = C(4,2) = 6</li>
+                                <li>Probability = 6/21</li>
+                                <li>= 2/7</li>
+                            </ol>
+                        </div>
+                        <button class="btn-secondary show-solution">Show Solution</button>
+                    </div>
+
+                    <div class="question-card" data-subject="physics">
+                        <div class="question-header">
+                            <span class="subject-tag physics">Physics</span>
+                            <h3>Optics</h3>
+                        </div>
+                        <p>A thin lens forms a real image of an object placed 30cm from it. If the image is twice the size of the object, find the focal length of the lens.</p>
+                        <div class="solution-steps hidden">
+                            <h4>Solution:</h4>
+                            <ol>
+                                <li>Magnification m = -v/u = 2</li>
+                                <li>If u = -30cm, then v = 60cm</li>
+                                <li>Using 1/f = 1/u + 1/v</li>
+                                <li>1/f = -1/30 + 1/60</li>
+                                <li>f = 20cm</li>
+                            </ol>
+                        </div>
+                        <button class="btn-secondary show-solution">Show Solution</button>
+                    </div>
+
+                    <div class="question-card" data-subject="chemistry">
+                        <div class="question-header">
+                            <span class="subject-tag chemistry">Chemistry</span>
+                            <h3>Chemical Bonding</h3>
+                        </div>
+                        <p>Predict the hybridization and shape of XeF₄ molecule.</p>
+                        <div class="solution-steps hidden">
+                            <h4>Solution:</h4>
+                            <ol>
+                                <li>Xe has 8 valence electrons</li>
+                                <li>4 electrons used in bonding with F</li>
+                                <li>2 lone pairs</li>
+                                <li>Hybridization: sp³d²</li>
+                                <li>Shape: Square planar</li>
+                            </ol>
+                        </div>
+                        <button class="btn-secondary show-solution">Show Solution</button>
+                    </div>
+
+                    <div class="question-card" data-subject="maths">
+                        <div class="question-header">
+                            <span class="subject-tag maths">Mathematics</span>
+                            <h3>Determinants</h3>
+                        </div>
+                        <p>If A is a 3×3 matrix and |A| = 6, find |2A|.</p>
+                        <div class="solution-steps hidden">
+                            <h4>Solution:</h4>
+                            <ol>
+                                <li>For a 3×3 matrix, |kA| = k³|A|</li>
+                                <li>|2A| = 2³|A|</li>
+                                <li>|2A| = 8 × 6</li>
+                                <li>|2A| = 48</li>
+                            </ol>
+                        </div>
+                        <button class="btn-secondary show-solution">Show Solution</button>
+                    </div>
+
+                    <!-- End of questions -->
+                </div>
+            </div>
+        </section>
+
+        <section class="study-tips">
+            <div class="container">
+                <h2 class="section-title">Preparation Tips</h2>
+                <div class="tips-grid">
+                    <div class="tip-card">
+                        <i class="fas fa-clock"></i>
+                        <h3>Time Management</h3>
+                        <ul>
+                            <li>Create a daily study schedule</li>
+                            <li>Practice time-bound mock tests</li>
+                            <li>Allocate time based on subject weightage</li>
+                            <li>Include short breaks for better focus</li>
+                        </ul>
+                    </div>
+                    <div class="tip-card">
+                        <i class="fas fa-book"></i>
+                        <h3>Study Strategy</h3>
+                        <ul>
+                            <li>Focus on NCERT fundamentals</li>
+                            <li>Solve previous year papers</li>
+                            <li>Regular revision is key</li>
+                            <li>Practice important derivations</li>
+                        </ul>
+                    </div>
+                    <div class="tip-card">
+                        <i class="fas fa-bullseye"></i>
+                        <h3>Exam Techniques</h3>
+                        <ul>
+                            <li>Read questions carefully</li>
+                            <li>Attempt easy questions first</li>
+                            <li>Check calculations twice</li>
+                            <li>Manage negative marking</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>PrepArena</h3>
+                <p>Your success is our priority. Join thousands of successful students who achieved their goals with PrepArena.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="index.html#courses"><i class="fas fa-graduation-cap"></i> Courses</a></li>
+                    <li><a href="coding-interview.html"><i class="fas fa-laptop-code"></i> Coding Prep</a></li>
+                    <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect With Us</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 

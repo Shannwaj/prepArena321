@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Programming Basics - PrepArena</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="main-container">
+        <header class="header glass">
+            <nav class="nav-container">
+                <div class="logo">PrepArena</div>
+                <div class="nav-toggle" id="navToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle">
+                            Features <i class="fas fa-chevron-down"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="coding-interview.html">
+                                <i class="fas fa-laptop-code"></i>
+                                Coding Interview Prep
+                            </a></li>
+                            <li><a href="jee-mains.html">
+                                <i class="fas fa-graduation-cap"></i>
+                                JEE Mains
+                            </a></li>
+                            <li><a href="neet-preparation.html">
+                                <i class="fas fa-heartbeat"></i>
+                                NEET Preparation
+                            </a></li>
+                            <li><a href="professional-interview.html">
+                                <i class="fas fa-briefcase"></i>
+                                Professional Interview
+                            </a></li>
+                        </ul>
+                    </li>
+                    <li><a href="courses.html">Courses</a></li>
+                    <li><a href="free-courses.html">Free Courses</a></li>
+                    <li><a href="jobs.html">Jobs</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="auth.html" class="btn-primary">Sign In</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section class="page-hero python-hero">
+                <div class="hero-content">
+                    <h1>Python Programming Basics</h1>
+                    <p>Learn the fundamentals of Python programming with our comprehensive video tutorials and hands-on exercises.</p>
+                </div>
+            </section>
+
+            <section class="course-overview">
+                <div class="container">
+                    <div class="overview-grid">
+                        <div class="overview-content glass">
+                            <h2>About This Course</h2>
+                            <p>This beginner-friendly Python course is designed to help you start your programming journey with one of the most popular and versatile programming languages in the world. Whether you're interested in web development, data science, artificial intelligence, or automation, Python provides an excellent foundation for your programming career.</p>
+                            
+                            <div class="course-features-list">
+                                <div class="feature-item">
+                                    <i class="fas fa-video"></i>
+                                    <div>
+                                        <h3>10+ Video Lectures</h3>
+                                        <p>Comprehensive video tutorials covering all basic Python concepts</p>
+                                    </div>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-laptop-code"></i>
+                                    <div>
+                                        <h3>Interactive Coding Exercises</h3>
+                                        <p>Practice what you learn with interactive coding challenges</p>
+                                    </div>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-code"></i>
+                                    <div>
+                                        <h3>Basic Syntax and Concepts</h3>
+                                        <p>Learn Python syntax, data types, control structures, and functions</p>
+                                    </div>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-tasks"></i>
+                                    <div>
+                                        <h3>Practice Assignments</h3>
+                                        <p>Reinforce your learning with real-world coding assignments</p>
+                                    </div>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-users"></i>
+                                    <div>
+                                        <h3>Community Support</h3>
+                                        <p>Join our student community to get help and share your progress</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="course-stats">
+                                <div class="stat">
+                                    <i class="fas fa-users"></i>
+                                    <span>25K+ Students</span>
+                                </div>
+                                <div class="stat">
+                                    <i class="fas fa-star"></i>
+                                    <span>4.8/5 Rating</span>
+                                </div>
+                                <div class="stat">
+                                    <i class="fas fa-certificate"></i>
+                                    <span>Certificate Available</span>
+                                </div>
+                            </div>
+
+                            <div class="cta-buttons">
+                                <a href="#curriculum" class="btn-primary">View Curriculum</a>
+                                <a href="#" class="btn-secondary enroll-btn">Enroll for Free</a>
+                            </div>
+                        </div>
+                        <div class="overview-image glass">
+                            <img src="https://images.unsplash.com/photo-1526379095098-d400fd0bf935?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Python Programming">
+                            <div class="course-details">
+                                <div class="detail-item">
+                                    <i class="fas fa-clock"></i>
+                                    <span>8 Weeks</span>
+                                </div>
+                                <div class="detail-item">
+                                    <i class="fas fa-signal"></i>
+                                    <span>Beginner Level</span>
+                                </div>
+                                <div class="detail-item">
+                                    <i class="fas fa-language"></i>
+                                    <span>English</span>
+                                </div>
+                                <div class="detail-item">
+                                    <i class="fas fa-tag"></i>
+                                    <span>Free Access</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="curriculum" class="curriculum-section">
+                <div class="container">
+                    <h2 class="section-title">Course Curriculum</h2>
+                    <div class="curriculum-grid">
+                        <div class="module glass">
+                            <div class="module-header">
+                                <h3><i class="fas fa-book"></i> Module 1: Introduction to Python</h3>
+                                <span class="module-length">3 Lessons • 45 mins</span>
+                            </div>
+                            <div class="lessons">
+                                <div class="lesson">
+                                    <i class="fas fa-play-circle"></i>
+                                    <span class="lesson-title">What is Python and Why Learn It?</span>
+                                    <span class="lesson-duration">15 mins</span>
+                                </div>
+                                <div class="lesson">
+                                    <i class="fas fa-play-circle"></i>
+                                    <span class="lesson-title">Setting Up Python Environment</span>
+                                    <span class="lesson-duration">20 mins</span>
+                                </div>
+                                <div class="lesson">
+                                    <i class="fas fa-play-circle"></i>
+                                    <span class="lesson-title">Your First Python Program</span>
+                                    <span class="lesson-duration">10 mins</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="module glass">
+                            <div class="module-header">
+                                <h3><i class="fas fa-code"></i> Module 2: Python Basics</h3>
+                                <span class="module-length">4 Lessons • 1 hour</span>
+                            </div>
+                            <div class="lessons">
+                                <div class="lesson">
+                                    <i class="fas fa-play-circle"></i>
+                                    <span class="lesson-title">Variables and Data Types</span>
+                                    <span class="lesson-duration">15 mins</span>
+                                </div>
+                                <div class="lesson">
+                                    <i class="fas fa-play-circle"></i>
+                                    <span class="lesson-title">Basic Operators</span>
+                                    <span class="lesson-duration">15 mins</span>
+                                </div>
+                                <div class="lesson">
+                                    <i class="fas fa-play-circle"></i>
+                                    <span class="lesson-title">Input and Output</span>
+                                    <span class="lesson-duration">15 mins</span>
+                                </div>
+                                <div class="lesson">
+                                    <i class="fas fa-play-circle"></i>
+                                    <span class="lesson-title">String Manipulation</span>
+                                    <span class="lesson-duration">15 mins</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="module glass">
+                            <div class="module-header">
+                                <h3><i class="fas fa-sitemap"></i> Module 3: Control Structures</h3>
+                                <span class="module-length">3 Lessons • 50 mins</span>
+                            </div>
+                            <div class="lessons">
+                                <div class="lesson">
+                                    <i class="fas fa-play-circle"></i>
+                                    <span class="lesson-title">Conditional Statements (if-else)</span>
+                                    <span class="lesson-duration">20 mins</span>
+                                </div>
+                                <div class="lesson">
+                                    <i class="fas fa-play-circle"></i>
+                                    <span class="lesson-title">Loops (for and while)</span>
+                                    <span class="lesson-duration">20 mins</span>
+                                </div>
+                                <div class="lesson">
+                                    <i class="fas fa-play-circle"></i>
+                                    <span class="lesson-title">Control Flow Practice</span>
+                                    <span class="lesson-duration">10 mins</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="module glass">
+                            <div class="module-header">
+                                <h3><i class="fas fa-list-ol"></i> Module 4: Data Structures</h3>
+                                <span class="module-length">4 Lessons • 1 hour</span>
+                            </div>
+                            <div class="lessons">
+                                <div class="lesson">
+                                    <i class="fas fa-play-circle"></i>
+                                    <span class="lesson-title">Lists and Tuples</span>
+                                    <span class="lesson-duration">15 mins</span>
+                                </div>
+                                <div class="lesson">
+                                    <i class="fas fa-play-circle"></i>
+                                    <span class="lesson-title">Dictionaries</span>
+                                    <span class="lesson-duration">15 mins</span>
+                                </div>
+                                <div class="lesson">
+                                    <i class="fas fa-play-circle"></i>
+                                    <span class="lesson-title">Sets</span>
+                                    <span class="lesson-duration">15 mins</span>
+                                </div>
+                                <div class="lesson">
+                                    <i class="fas fa-play-circle"></i>
+                                    <span class="lesson-title">Data Structure Operations</span>
+                                    <span class="lesson-duration">15 mins</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="module glass">
+                            <div class="module-header">
+                                <h3><i class="fas fa-cogs"></i> Module 5: Functions</h3>
+                                <span class="module-length">3 Lessons • 45 mins</span>
+                            </div>
+                            <div class="lessons">
+                                <div class="lesson">
+                                    <i class="fas fa-play-circle"></i>
+                                    <span class="lesson-title">Defining and Calling Functions</span>
+                                    <span class="lesson-duration">15 mins</span>
+                                </div>
+                                <div class="lesson">
+                                    <i class="fas fa-play-circle"></i>
+                                    <span class="lesson-title">Parameters and Return Values</span>
+                                    <span class="lesson-duration">15 mins</span>
+                                </div>
+                                <div class="lesson">
+                                    <i class="fas fa-play-circle"></i>
+                                    <span class="lesson-title">Scope and Lambda Functions</span>
+                                    <span class="lesson-duration">15 mins</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="module glass">
+                            <div class="module-header">
+                                <h3><i class="fas fa-file-alt"></i> Module 6: File Handling</h3>
+                                <span class="module-length">2 Lessons • 30 mins</span>
+                            </div>
+                            <div class="lessons">
+                                <div class="lesson">
+                                    <i class="fas fa-play-circle"></i>
+                                    <span class="lesson-title">Reading and Writing Files</span>
+                                    <span class="lesson-duration">15 mins</span>
+                                </div>
+                                <div class="lesson">
+                                    <i class="fas fa-play-circle"></i>
+                                    <span class="lesson-title">File Operations Practice</span>
+                                    <span class="lesson-duration">15 mins</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="module glass">
+                            <div class="module-header">
+                                <h3><i class="fas fa-project-diagram"></i> Module 7: Mini Projects</h3>
+                                <span class="module-length">3 Projects • Self-paced</span>
+                            </div>
+                            <div class="lessons">
+                                <div class="lesson">
+                                    <i class="fas fa-tasks"></i>
+                                    <span class="lesson-title">Project 1: Number Guessing Game</span>
+                                    <span class="lesson-tag">Guided Project</span>
+                                </div>
+                                <div class="lesson">
+                                    <i class="fas fa-tasks"></i>
+                                    <span class="lesson-title">Project 2: To-Do List Application</span>
+                                    <span class="lesson-tag">Guided Project</span>
+                                </div>
+                                <div class="lesson">
+                                    <i class="fas fa-tasks"></i>
+                                    <span class="lesson-title">Project 3: Text-based Adventure Game</span>
+                                    <span class="lesson-tag">Challenge Project</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="instructor-section">
+                <div class="container">
+                    <h2 class="section-title">Meet Your Instructor</h2>
+                    <div class="instructor-card glass">
+                        <div class="instructor-image">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Instructor">
+                        </div>
+                        <div class="instructor-info">
+                            <h3>Rahul Sharma</h3>
+                            <p class="instructor-title">Senior Python Developer | 10+ Years Experience</p>
+                            <p class="instructor-bio">Rahul is a passionate Python developer with over a decade of experience in software development. He has worked with companies like Google and Microsoft, and has taught programming to thousands of students. His teaching approach focuses on practical application and real-world examples.</p>
+                            <div class="instructor-stats">
+                                <div class="stat">
+                                    <i class="fas fa-user-graduate"></i>
+                                    <span>15,000+ Students</span>
+                                </div>
+                                <div class="stat">
+                                    <i class="fas fa-star"></i>
+                                    <span>4.9/5 Rating</span>
+                                </div>
+                                <div class="stat">
+                                    <i class="fas fa-video"></i>
+                                    <span>8 Courses</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="reviews-section">
+                <div class="container">
+                    <h2 class="section-title">What Students Say</h2>
+                    <div class="reviews-grid">
+                        <div class="review-card glass">
+                            <div class="review-header">
+                                <img src="https://randomuser.me/api/portraits/women/26.jpg" alt="Student">
+                                <div>
+                                    <h4>Priya Mehta</h4>
+                                    <div class="rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <p>"This course was exactly what I needed to start my programming journey. The concepts are explained so clearly, and the practice exercises really helped cement my understanding. I've already built my first small program!"</p>
+                        </div>
+                        <div class="review-card glass">
+                            <div class="review-header">
+                                <img src="https://randomuser.me/api/portraits/men/54.jpg" alt="Student">
+                                <div>
+                                    <h4>Amar Singh</h4>
+                                    <div class="rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <p>"As someone with no prior programming experience, I was worried this would be too difficult. But the step-by-step approach made it easy to follow along. The mini-projects were fun and really helped me apply what I learned."</p>
+                        </div>
+                        <div class="review-card glass">
+                            <div class="review-header">
+                                <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Student">
+                                <div>
+                                    <h4>Neha Kapoor</h4>
+                                    <div class="rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half-alt"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <p>"The community support is amazing! Whenever I got stuck, someone was always there to help. I've tried other programming courses before, but this one actually made the concepts stick. Highly recommend for beginners!"</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="faq-section">
+                <div class="container">
+                    <h2 class="section-title">Frequently Asked Questions</h2>
+                    <div class="faq-grid">
+                        <div class="faq-card glass">
+                            <h3><i class="fas fa-plus"></i> Do I need any prior programming experience?</h3>
+                            <p>No, this course is designed for absolute beginners. We start from the very basics and gradually progress to more advanced topics.</p>
+                        </div>
+                        <div class="faq-card glass">
+                            <h3><i class="fas fa-plus"></i> What software do I need for this course?</h3>
+                            <p>You'll need Python installed on your computer (we show you how), and any text editor or IDE. We recommend using Visual Studio Code or PyCharm (free version).</p>
+                        </div>
+                        <div class="faq-card glass">
+                            <h3><i class="fas fa-plus"></i> How long do I have access to the course?</h3>
+                            <p>Once enrolled, you have lifetime access to the course materials. You can learn at your own pace and revisit lectures whenever you need.</p>
+                        </div>
+                        <div class="faq-card glass">
+                            <h3><i class="fas fa-plus"></i> Is there a certificate upon completion?</h3>
+                            <p>Yes, you'll receive a certificate of completion once you finish all the modules and projects. This can be added to your resume or LinkedIn profile.</p>
+                        </div>
+                        <div class="faq-card glass">
+                            <h3><i class="fas fa-plus"></i> How much time should I dedicate to this course?</h3>
+                            <p>We recommend spending 3-5 hours per week. The entire course can be completed in about 8 weeks with this pace, but you're free to learn at your own speed.</p>
+                        </div>
+                        <div class="faq-card glass">
+                            <h3><i class="fas fa-plus"></i> Can I download the course materials for offline viewing?</h3>
+                            <p>Yes, all lecture notes and exercise files can be downloaded for offline use. Video lectures are available for streaming only.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="cta-section">
+                <div class="container">
+                    <h2>Ready to Start Your Python Journey?</h2>
+                    <p>Join thousands of students who have already taken the first step towards learning programming</p>
+                    <div class="cta-buttons">
+                        <a href="#" class="btn-primary enroll-btn">Enroll for Free</a>
+                        <a href="free-courses.html" class="btn-secondary">Browse More Free Courses</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>About PrepArena</h3>
+                    <p>Your one-stop platform for comprehensive preparation for coding interviews, competitive exams, and career growth.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+                        <li><a href="courses.html"><i class="fas fa-chevron-right"></i> Courses</a></li>
+                        <li><a href="free-courses.html"><i class="fas fa-chevron-right"></i> Free Courses</a></li>
+                        <li><a href="jobs.html"><i class="fas fa-chevron-right"></i> Jobs</a></li>
+                        <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> +1 234 567 8900</li>
+                        <li><i class="fas fa-envelope"></i> info@preparena.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Tech Street, Silicon Valley</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 PrepArena. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 

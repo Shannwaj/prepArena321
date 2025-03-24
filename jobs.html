@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jobs - PrepArena</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="main-container">
+        <header class="header glass">
+            <nav class="nav-container">
+                <div class="logo">PrepArena</div>
+                <div class="nav-toggle" id="navToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle">
+                            Features <i class="fas fa-chevron-down"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="coding-interview.html">
+                                <i class="fas fa-laptop-code"></i>
+                                Coding Interview Prep
+                            </a></li>
+                            <li><a href="jee-mains.html">
+                                <i class="fas fa-graduation-cap"></i>
+                                JEE Mains
+                            </a></li>
+                            <li><a href="neet-preparation.html">
+                                <i class="fas fa-heartbeat"></i>
+                                NEET Preparation
+                            </a></li>
+                            <li><a href="professional-interview.html">
+                                <i class="fas fa-briefcase"></i>
+                                Professional Interview
+                            </a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#courses">Courses</a></li>
+                    <li><a href="coding-interview.html">Coding Interview</a></li>
+                    <li><a href="jobs.html" class="active">Jobs</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="auth.html" class="btn-primary">Sign In</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="jobs-page">
+            <section class="page-hero">
+                <div class="hero-content">
+                    <h1>Find Your Dream Job</h1>
+                    <p>Discover opportunities that match your skills and aspirations</p>
+                    <div class="search-container">
+                        <div class="search-box">
+                            <i class="fas fa-search"></i>
+                            <input type="text" placeholder="Search jobs by title, company, or keywords">
+                            <button class="btn-primary">Search</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="jobs-content">
+                <div class="jobs-container">
+                    <aside class="jobs-filters">
+                        <h3>Filters</h3>
+                        <div class="filter-group">
+                            <h4>Job Type</h4>
+                            <label class="checkbox-container">
+                                <input type="checkbox" checked>
+                                <span class="checkmark"></span>
+                                Full Time
+                            </label>
+                            <label class="checkbox-container">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                                Part Time
+                            </label>
+                            <label class="checkbox-container">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                                Contract
+                            </label>
+                            <label class="checkbox-container">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                                Internship
+                            </label>
+                        </div>
+
+                        <div class="filter-group">
+                            <h4>Experience Level</h4>
+                            <label class="checkbox-container">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                                Entry Level
+                            </label>
+                            <label class="checkbox-container">
+                                <input type="checkbox" checked>
+                                <span class="checkmark"></span>
+                                Mid Level
+                            </label>
+                            <label class="checkbox-container">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                                Senior Level
+                            </label>
+                        </div>
+
+                        <div class="filter-group">
+                            <h4>Location</h4>
+                            <div class="location-search">
+                                <input type="text" placeholder="Search location">
+                                <i class="fas fa-location-dot"></i>
+                            </div>
+                        </div>
+
+                        <div class="filter-group">
+                            <h4>Salary Range</h4>
+                            <div class="salary-range">
+                                <input type="range" min="0" max="200000" step="10000" value="100000">
+                                <div class="salary-values">
+                                    <span>$0</span>
+                                    <span>$200K</span>
+                                </div>
+                            </div>
+                        </div>
+                    </aside>
+
+                    <div class="jobs-list">
+                        <div class="jobs-header">
+                            <h2>Available Positions</h2>
+                            <div class="jobs-sort">
+                                <select>
+                                    <option>Most Recent</option>
+                                    <option>Highest Paid</option>
+                                    <option>Most Relevant</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="job-card">
+                            <div class="job-card-header">
+                                <img src="https://logo.clearbit.com/google.com" alt="Google">
+                                <div class="job-card-title">
+                                    <h3>Senior Software Engineer</h3>
+                                    <span class="company-name">Google</span>
+                                    <span class="location"><i class="fas fa-location-dot"></i> Mountain View, CA</span>
+                                </div>
+                                <button class="btn-save"><i class="far fa-bookmark"></i></button>
+                            </div>
+                            <div class="job-card-content">
+                                <p>Join our team to build next-generation cloud infrastructure and help shape the future of computing.</p>
+                                <div class="job-tags">
+                                    <span class="tag">Python</span>
+                                    <span class="tag">Java</span>
+                                    <span class="tag">Cloud</span>
+                                    <span class="tag">Kubernetes</span>
+                                </div>
+                            </div>
+                            <div class="job-card-footer">
+                                <div class="job-info">
+                                    <span><i class="fas fa-clock"></i> Full Time</span>
+                                    <span><i class="fas fa-dollar-sign"></i> $150K - $200K</span>
+                                </div>
+                                <button class="btn-primary">Apply Now</button>
+                            </div>
+                        </div>
+
+                        <div class="job-card">
+                            <div class="job-card-header">
+                                <img src="https://logo.clearbit.com/microsoft.com" alt="Microsoft">
+                                <div class="job-card-title">
+                                    <h3>Frontend Developer</h3>
+                                    <span class="company-name">Microsoft</span>
+                                    <span class="location"><i class="fas fa-location-dot"></i> Redmond, WA</span>
+                                </div>
+                                <button class="btn-save"><i class="far fa-bookmark"></i></button>
+                            </div>
+                            <div class="job-card-content">
+                                <p>Create engaging user experiences for our cloud-based applications using modern web technologies.</p>
+                                <div class="job-tags">
+                                    <span class="tag">React</span>
+                                    <span class="tag">TypeScript</span>
+                                    <span class="tag">CSS</span>
+                                    <span class="tag">Azure</span>
+                                </div>
+                            </div>
+                            <div class="job-card-footer">
+                                <div class="job-info">
+                                    <span><i class="fas fa-clock"></i> Full Time</span>
+                                    <span><i class="fas fa-dollar-sign"></i> $120K - $160K</span>
+                                </div>
+                                <button class="btn-primary">Apply Now</button>
+                            </div>
+                        </div>
+
+                        <div class="job-card">
+                            <div class="job-card-header">
+                                <img src="https://logo.clearbit.com/amazon.com" alt="Amazon">
+                                <div class="job-card-title">
+                                    <h3>DevOps Engineer</h3>
+                                    <span class="company-name">Amazon</span>
+                                    <span class="location"><i class="fas fa-location-dot"></i> Seattle, WA</span>
+                                </div>
+                                <button class="btn-save"><i class="far fa-bookmark"></i></button>
+                            </div>
+                            <div class="job-card-content">
+                                <p>Build and maintain scalable infrastructure for AWS services and improve deployment processes.</p>
+                                <div class="job-tags">
+                                    <span class="tag">AWS</span>
+                                    <span class="tag">Docker</span>
+                                    <span class="tag">Jenkins</span>
+                                    <span class="tag">Terraform</span>
+                                </div>
+                            </div>
+                            <div class="job-card-footer">
+                                <div class="job-info">
+                                    <span><i class="fas fa-clock"></i> Full Time</span>
+                                    <span><i class="fas fa-dollar-sign"></i> $130K - $180K</span>
+                                </div>
+                                <button class="btn-primary">Apply Now</button>
+                            </div>
+                        </div>
+
+                        <div class="job-card">
+                            <div class="job-card-header">
+                                <img src="https://logo.clearbit.com/apple.com" alt="Apple">
+                                <div class="job-card-title">
+                                    <h3>iOS Developer</h3>
+                                    <span class="company-name">Apple</span>
+                                    <span class="location"><i class="fas fa-location-dot"></i> Cupertino, CA</span>
+                                </div>
+                                <button class="btn-save"><i class="far fa-bookmark"></i></button>
+                            </div>
+                            <div class="job-card-content">
+                                <p>Join our team to develop cutting-edge iOS applications and contribute to the next generation of mobile experiences.</p>
+                                <div class="job-tags">
+                                    <span class="tag">Swift</span>
+                                    <span class="tag">iOS</span>
+                                    <span class="tag">SwiftUI</span>
+                                    <span class="tag">Xcode</span>
+                                </div>
+                            </div>
+                            <div class="job-card-footer">
+                                <div class="job-info">
+                                    <span><i class="fas fa-clock"></i> Full Time</span>
+                                    <span><i class="fas fa-dollar-sign"></i> $140K - $180K</span>
+                                </div>
+                                <button class="btn-primary">Apply Now</button>
+                            </div>
+                        </div>
+
+                        <div class="job-card">
+                            <div class="job-card-header">
+                                <img src="https://logo.clearbit.com/meta.com" alt="Meta">
+                                <div class="job-card-title">
+                                    <h3>Machine Learning Engineer</h3>
+                                    <span class="company-name">Meta</span>
+                                    <span class="location"><i class="fas fa-location-dot"></i> Menlo Park, CA</span>
+                                </div>
+                                <button class="btn-save"><i class="far fa-bookmark"></i></button>
+                            </div>
+                            <div class="job-card-content">
+                                <p>Work on cutting-edge AI/ML solutions for Meta's products and help shape the future of social technology.</p>
+                                <div class="job-tags">
+                                    <span class="tag">Python</span>
+                                    <span class="tag">TensorFlow</span>
+                                    <span class="tag">PyTorch</span>
+                                    <span class="tag">Deep Learning</span>
+                                </div>
+                            </div>
+                            <div class="job-card-footer">
+                                <div class="job-info">
+                                    <span><i class="fas fa-clock"></i> Full Time</span>
+                                    <span><i class="fas fa-dollar-sign"></i> $160K - $220K</span>
+                                </div>
+                                <button class="btn-primary">Apply Now</button>
+                            </div>
+                        </div>
+
+                        <div class="job-card">
+                            <div class="job-card-header">
+                                <img src="https://logo.clearbit.com/netflix.com" alt="Netflix">
+                                <div class="job-card-title">
+                                    <h3>Full Stack Developer</h3>
+                                    <span class="company-name">Netflix</span>
+                                    <span class="location"><i class="fas fa-location-dot"></i> Los Gatos, CA</span>
+                                </div>
+                                <button class="btn-save"><i class="far fa-bookmark"></i></button>
+                            </div>
+                            <div class="job-card-content">
+                                <p>Build and maintain scalable applications for Netflix's streaming platform and contribute to our microservices architecture.</p>
+                                <div class="job-tags">
+                                    <span class="tag">Node.js</span>
+                                    <span class="tag">React</span>
+                                    <span class="tag">Java</span>
+                                    <span class="tag">Spring Boot</span>
+                                </div>
+                            </div>
+                            <div class="job-card-footer">
+                                <div class="job-info">
+                                    <span><i class="fas fa-clock"></i> Full Time</span>
+                                    <span><i class="fas fa-dollar-sign"></i> $140K - $190K</span>
+                                </div>
+                                <button class="btn-primary">Apply Now</button>
+                            </div>
+                        </div>
+
+                        <div class="job-card">
+                            <div class="job-card-header">
+                                <img src="https://logo.clearbit.com/tesla.com" alt="Tesla">
+                                <div class="job-card-title">
+                                    <h3>Robotics Engineer</h3>
+                                    <span class="company-name">Tesla</span>
+                                    <span class="location"><i class="fas fa-location-dot"></i> Fremont, CA</span>
+                                </div>
+                                <button class="btn-save"><i class="far fa-bookmark"></i></button>
+                            </div>
+                            <div class="job-card-content">
+                                <p>Design and develop robotics systems for Tesla's manufacturing facilities and contribute to automation initiatives.</p>
+                                <div class="job-tags">
+                                    <span class="tag">ROS</span>
+                                    <span class="tag">C++</span>
+                                    <span class="tag">Python</span>
+                                    <span class="tag">Computer Vision</span>
+                                </div>
+                            </div>
+                            <div class="job-card-footer">
+                                <div class="job-info">
+                                    <span><i class="fas fa-clock"></i> Full Time</span>
+                                    <span><i class="fas fa-dollar-sign"></i> $130K - $180K</span>
+                                </div>
+                                <button class="btn-primary">Apply Now</button>
+                            </div>
+                        </div>
+
+                        <div class="job-card">
+                            <div class="job-card-header">
+                                <img src="https://logo.clearbit.com/adobe.com" alt="Adobe">
+                                <div class="job-card-title">
+                                    <h3>UX/UI Designer</h3>
+                                    <span class="company-name">Adobe</span>
+                                    <span class="location"><i class="fas fa-location-dot"></i> San Jose, CA</span>
+                                </div>
+                                <button class="btn-save"><i class="far fa-bookmark"></i></button>
+                            </div>
+                            <div class="job-card-content">
+                                <p>Create exceptional user experiences for Adobe's Creative Cloud products and shape the future of creative software.</p>
+                                <div class="job-tags">
+                                    <span class="tag">Figma</span>
+                                    <span class="tag">Adobe XD</span>
+                                    <span class="tag">Prototyping</span>
+                                    <span class="tag">User Research</span>
+                                </div>
+                            </div>
+                            <div class="job-card-footer">
+                                <div class="job-info">
+                                    <span><i class="fas fa-clock"></i> Full Time</span>
+                                    <span><i class="fas fa-dollar-sign"></i> $120K - $160K</span>
+                                </div>
+                                <button class="btn-primary">Apply Now</button>
+                            </div>
+                        </div>
+
+                        <div class="job-card">
+                            <div class="job-card-header">
+                                <img src="https://logo.clearbit.com/salesforce.com" alt="Salesforce">
+                                <div class="job-card-title">
+                                    <h3>Cloud Solutions Architect</h3>
+                                    <span class="company-name">Salesforce</span>
+                                    <span class="location"><i class="fas fa-location-dot"></i> San Francisco, CA</span>
+                                </div>
+                                <button class="btn-save"><i class="far fa-bookmark"></i></button>
+                            </div>
+                            <div class="job-card-content">
+                                <p>Design and implement enterprise-scale cloud solutions for Fortune 500 clients using Salesforce platform.</p>
+                                <div class="job-tags">
+                                    <span class="tag">Salesforce</span>
+                                    <span class="tag">Apex</span>
+                                    <span class="tag">Lightning</span>
+                                    <span class="tag">Integration</span>
+                                </div>
+                            </div>
+                            <div class="job-card-footer">
+                                <div class="job-info">
+                                    <span><i class="fas fa-clock"></i> Full Time</span>
+                                    <span><i class="fas fa-dollar-sign"></i> $150K - $200K</span>
+                                </div>
+                                <button class="btn-primary">Apply Now</button>
+                            </div>
+                        </div>
+
+                        <div class="pagination">
+                            <button class="btn-page"><i class="fas fa-chevron-left"></i></button>
+                            <button class="btn-page active">1</button>
+                            <button class="btn-page">2</button>
+                            <button class="btn-page">3</button>
+                            <span>...</span>
+                            <button class="btn-page">10</button>
+                            <button class="btn-page"><i class="fas fa-chevron-right"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>About PrepArena</h3>
+                    <p>Your one-stop platform for comprehensive preparation for coding interviews, competitive exams, and career growth.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Home</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Courses</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Jobs</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> +1 234 567 8900</li>
+                        <li><i class="fas fa-envelope"></i> info@preparena.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Tech Street, Silicon Valley</li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 

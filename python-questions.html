@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Interview Questions - PrepArena</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism-tomorrow.min.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="main-container">
+        <header class="header glass">
+            <nav class="nav-container">
+                <div class="logo">PrepArena</div>
+                <div class="nav-toggle" id="navToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle">
+                            Features <i class="fas fa-chevron-down"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="coding-interview.html">
+                                <i class="fas fa-laptop-code"></i>
+                                Coding Interview Prep
+                            </a></li>
+                            <li><a href="jee-mains.html">
+                                <i class="fas fa-graduation-cap"></i>
+                                JEE Mains
+                            </a></li>
+                            <li><a href="neet-preparation.html">
+                                <i class="fas fa-heartbeat"></i>
+                                NEET Preparation
+                            </a></li>
+                            <li><a href="professional-interview.html">
+                                <i class="fas fa-briefcase"></i>
+                                Professional Interview
+                            </a></li>
+                        </ul>
+                    </li>
+                    <li><a href="courses.html">Courses</a></li>
+                    <li><a href="free-courses.html">Free Courses</a></li>
+                    <li><a href="jobs.html">Jobs</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="auth.html" class="btn-primary">Sign In</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section class="page-hero">
+                <div class="hero-content">
+                    <h1>Python Interview Questions</h1>
+                    <p>Master Python concepts for technical interviews and coding challenges</p>
+                </div>
+            </section>
+
+            <section class="language-questions">
+                <div class="container">
+                    <div class="language-questions-grid">
+                        <!-- Question 1 -->
+                        <div class="language-question-card glass">
+                            <h3>1. What are decorators in Python?</h3>
+                            <div class="answer">
+                                <p>Decorators are a powerful feature in Python that allow you to modify the behavior of functions or classes without permanently modifying the function or class itself.</p>
+                                <ul>
+                                    <li>Decorators are functions that take another function as an argument and extend its behavior</li>
+                                    <li>They use the @decorator_name syntax (syntactic sugar)</li>
+                                    <li>Common use cases: logging, timing functions, access control, caching, etc.</li>
+                                </ul>
+                                <pre><code class="language-python">
+def timer(func):
+    def wrapper(*args, **kwargs):
+        import time
+        start = time.time()
+        result = func(*args, **kwargs)
+        print(f"Function {func.__name__} took {time.time() - start:.2f} seconds")
+        return result
+    return wrapper
+
+@timer
+def slow_function(n):
+    import time
+    time.sleep(n)
+    return n
+
+# Equivalent to:
+# slow_function = timer(slow_function)
+
+# Usage
+result = slow_function(2)  # Output: Function slow_function took 2.00 seconds
+                                </code></pre>
+                            </div>
+                        </div>
+
+                        <!-- Question 2 -->
+                        <div class="language-question-card glass">
+                            <h3>2. What is the difference between lists and tuples in Python?</h3>
+                            <div class="answer">
+                                <p>Key differences:</p>
+                                <ul>
+                                    <li><strong>Mutability</strong>: Lists are mutable (can be changed), tuples are immutable (cannot be changed after creation)</li>
+                                    <li><strong>Syntax</strong>: Lists use square brackets [1, 2, 3], tuples use parentheses (1, 2, 3)</li>
+                                    <li><strong>Performance</strong>: Tuples are slightly faster and use less memory</li>
+                                    <li><strong>Use cases</strong>: Lists for homogeneous collections that may change, tuples for heterogeneous data that won't change</li>
+                                    <li><strong>Hashability</strong>: Tuples can be used as dictionary keys (if they contain only immutable elements), lists cannot</li>
+                                </ul>
+                                <pre><code class="language-python">
+# List examples
+my_list = [1, 2, 3]
+my_list.append(4)
+my_list[0] = 10
+
+# Tuple examples
+my_tuple = (1, 2, 3)
+# my_tuple.append(4)  # AttributeError
+# my_tuple[0] = 10    # TypeError
+
+# Dictionary keys
+my_dict = {(1, 2): "tuple key works"}
+# my_dict[[1, 2]] = "list key fails"  # TypeError
+                                </code></pre>
+                            </div>
+                        </div>
+
+                        <!-- Question 3 -->
+                        <div class="language-question-card glass">
+                            <h3>3. What is the GIL in Python?</h3>
+                            <div class="answer">
+                                <p>The GIL (Global Interpreter Lock) is a mutex that protects access to Python objects, preventing multiple threads from executing Python bytecode at once.</p>
+                                <ul>
+                                    <li>Only one thread can execute Python code at a time (even on multi-core processors)</li>
+                                    <li>The GIL significantly impacts multi-threaded CPU-bound programs</li>
+                                    <li>I/O-bound programs generally don't suffer much from the GIL</li>
+                                    <li>The GIL exists in CPython (the standard Python implementation) but not in some other implementations like Jython or IronPython</li>
+                                    <li>For CPU-bound tasks, use multiprocessing instead of threading to work around the GIL</li>
+                                </ul>
+                                <pre><code class="language-python">
+# CPU-bound example with multiprocessing to bypass the GIL
+from multiprocessing import Pool
+
+def cpu_bound_task(x):
+    # Computationally intensive work
+    return sum(i * i for i in range(x))
+
+if __name__ == "__main__":
+    # Process-based parallelism (bypasses GIL)
+    with Pool(processes=4) as pool:
+        results = pool.map(cpu_bound_task, [10000000, 20000000, 30000000, 40000000])
+                                </code></pre>
+                            </div>
+                        </div>
+
+                        <!-- Question 4 -->
+                        <div class="language-question-card glass">
+                            <h3>4. Explain Python's memory management</h3>
+                            <div class="answer">
+                                <p>Python's memory management is handled automatically through a combination of reference counting and garbage collection:</p>
+                                <ul>
+                                    <li><strong>Reference Counting</strong>: Python tracks how many references point to each object. When the count drops to zero, the object is deallocated</li>
+                                    <li><strong>Garbage Collection</strong>: Periodically runs to detect and clean up reference cycles (objects that reference each other but aren't accessible)</li>
+                                    <li><strong>Memory Pooling</strong>: Python maintains pools of objects for small integers and strings to improve performance</li>
+                                    <li><strong>Private Heap</strong>: Python has its own private heap for memory management</li>
+                                </ul>
+                                <pre><code class="language-python">
+import sys
+import gc
+
+# Reference counting
+x = []
+print(sys.getrefcount(x) - 1)  # -1 because getrefcount creates a temp reference
+
+# Manual garbage collection
+gc.collect()
+
+# Memory usage inspection
+import tracemalloc
+tracemalloc.start()
+snapshot1 = tracemalloc.take_snapshot()
+# ... allocate memory ...
+snapshot2 = tracemalloc.take_snapshot()
+top_stats = snapshot2.compare_to(snapshot1, 'lineno')
+print(top_stats[0])
+                                </code></pre>
+                            </div>
+                        </div>
+
+                        <!-- Question 5 -->
+                        <div class="language-question-card glass">
+                            <h3>5. What are generators in Python?</h3>
+                            <div class="answer">
+                                <p>Generators are a special type of iterator that generate values on-the-fly:</p>
+                                <ul>
+                                    <li>Created using functions with the <code>yield</code> keyword</li>
+                                    <li>Generator functions maintain their state between calls</li>
+                                    <li>Values are generated one at a time, conserving memory for large datasets</li>
+                                    <li>Generator expressions are similar to list comprehensions but use parentheses: <code>(x for x in range(10))</code></li>
+                                    <li>Supports the iterator protocol with <code>__next__()</code> and <code>__iter__()</code> methods</li>
+                                </ul>
+                                <pre><code class="language-python">
+# Generator function
+def fibonacci(limit):
+    a, b = 0, 1
+    while a < limit:
+        yield a
+        a, b = b, a + b
+
+# Usage
+for num in fibonacci(1000):
+    print(num, end=' ')
+
+# Generator expression (vs list comprehension)
+gen = (x**2 for x in range(1000000))  # Memory efficient
+# lst = [x**2 for x in range(1000000)]  # Creates entire list in memory
+
+# Getting values
+print(next(gen))  # 0
+print(next(gen))  # 1
+                                </code></pre>
+                            </div>
+                        </div>
+
+                        <!-- Question 6 -->
+                        <div class="language-question-card glass">
+                            <h3>6. What are context managers and the "with" statement?</h3>
+                            <div class="answer">
+                                <p>Context managers are a powerful Python pattern for resource management using the "with" statement:</p>
+                                <ul>
+                                    <li>Context managers ensure resources are properly acquired and released</li>
+                                    <li>Implemented using the <code>__enter__</code> and <code>__exit__</code> methods</li>
+                                    <li>Can also be created using the <code>contextlib.contextmanager</code> decorator</li>
+                                    <li>Common examples: file operations, database connections, locks</li>
+                                    <li>Properly handles exceptions within the context</li>
+                                </ul>
+                                <pre><code class="language-python">
+# Using with for files (built-in context manager)
+with open('file.txt', 'w') as f:
+    f.write('Hello, World!')
+# File is automatically closed when exiting the block
+
+# Creating a custom context manager
+class DatabaseConnection:
+    def __enter__(self):
+        # Setup code: open connection
+        self.conn = connect_to_database()
+        return self.conn
+        
+    def __exit__(self, exc_type, exc_val, exc_tb):
+        # Teardown code: close connection
+        self.conn.close()
+        # Return True to suppress exceptions, False to propagate them
+        return False
+
+# Using contextlib
+from contextlib import contextmanager
+
+@contextmanager
+def timer():
+    import time
+    start = time.time()
+    yield  # This is where the with-block's code executes
+    print(f"Elapsed time: {time.time() - start:.2f} seconds")
+
+with timer():
+    # Long operation
+    import time
+    time.sleep(1)
+                                </code></pre>
+                            </div>
+                        </div>
+
+                        <!-- Question 7 -->
+                        <div class="language-question-card glass">
+                            <h3>7. What are Python's dunder (magic) methods?</h3>
+                            <div class="answer">
+                                <p>Dunder (double underscore) or magic methods are special methods in Python that start and end with double underscores. They enable operator overloading and customizing object behavior:</p>
+                                <ul>
+                                    <li><strong>Object Creation/Initialization</strong>: <code>__new__</code>, <code>__init__</code>, <code>__del__</code></li>
+                                    <li><strong>String Representation</strong>: <code>__str__</code>, <code>__repr__</code></li>
+                                    <li><strong>Comparison Operators</strong>: <code>__eq__</code>, <code>__lt__</code>, <code>__gt__</code>, etc.</li>
+                                    <li><strong>Mathematical Operators</strong>: <code>__add__</code>, <code>__sub__</code>, <code>__mul__</code>, etc.</li>
+                                    <li><strong>Container Methods</strong>: <code>__len__</code>, <code>__getitem__</code>, <code>__setitem__</code>, etc.</li>
+                                    <li><strong>Callable Objects</strong>: <code>__call__</code></li>
+                                </ul>
+                                <pre><code class="language-python">
+class Vector:
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+        
+    def __repr__(self):
+        return f"Vector({self.x}, {self.y})"
+        
+    def __add__(self, other):
+        return Vector(self.x + other.x, self.y + other.y)
+        
+    def __mul__(self, scalar):
+        return Vector(self.x * scalar, self.y * scalar)
+        
+    def __len__(self):
+        return int((self.x**2 + self.y**2)**0.5)
+        
+    def __call__(self):
+        return (self.x, self.y)
+
+# Usage
+v1 = Vector(3, 4)
+v2 = Vector(2, 1)
+print(v1)            # Vector(3, 4)
+print(v1 + v2)       # Vector(5, 5)
+print(v1 * 2)        # Vector(6, 8)
+print(len(v1))       # 5
+print(v1())          # (3, 4)
+                                </code></pre>
+                            </div>
+                        </div>
+
+                        <!-- Question 8 -->
+                        <div class="language-question-card glass">
+                            <h3>8. Explain Python's data model and duck typing</h3>
+                            <div class="answer">
+                                <p>Python's data model refers to the interfaces that objects in Python expose:</p>
+                                <ul>
+                                    <li>All data in Python is represented by objects or relations between objects</li>
+                                    <li>Every object has a type, identity, and value</li>
+                                    <li>Objects can be mutable or immutable</li>
+                                </ul>
+                                <p><strong>Duck Typing</strong> is a programming concept where the type or class of an object is less important than the methods it defines or the attributes it has:</p>
+                                <ul>
+                                    <li>"If it walks like a duck and quacks like a duck, then it's a duck"</li>
+                                    <li>Focus on what an object can do rather than what it is</li>
+                                    <li>Enables more flexible and dynamic code</li>
+                                    <li>Contrast to strong typing where object types must match exactly</li>
+                                </ul>
+                                <pre><code class="language-python">
+# Duck typing example
+class Duck:
+    def quack(self):
+        return "Quack!"
+    
+    def fly(self):
+        return "Flying like a duck!"
+
+class Person:
+    def quack(self):
+        return "I'm imitating a duck!"
+    
+    def fly(self):
+        return "I'm flapping my arms!"
+
+def duck_test(thing):
+    # We don't care about the type of thing, only that it can quack and fly
+    print(thing.quack())
+    print(thing.fly())
+
+# Both objects work in the function despite being different types
+duck = Duck()
+person = Person()
+
+duck_test(duck)    # Works
+duck_test(person)  # Also works because it has the required methods
+                                </code></pre>
+                            </div>
+                        </div>
+
+                        <!-- Question 9 -->
+                        <div class="language-question-card glass">
+                            <h3>9. What are Python descriptors?</h3>
+                            <div class="answer">
+                                <p>Descriptors are objects that implement a subset of <code>__get__</code>, <code>__set__</code>, or <code>__delete__</code> methods. They allow you to customize what happens when an attribute is accessed:</p>
+                                <ul>
+                                    <li><strong>Data Descriptors</strong>: Implement both <code>__get__</code> and <code>__set__</code></li>
+                                    <li><strong>Non-Data Descriptors</strong>: Implement only <code>__get__</code></li>
+                                    <li>Used in property(), classmethod(), staticmethod(), and many other Python features</li>
+                                    <li>Allow reusing attribute access logic across multiple attributes or classes</li>
+                                </ul>
+                                <pre><code class="language-python">
+class ValidatedProperty:
+    def __init__(self, name, min_value=None, max_value=None):
+        self.name = name
+        self.min_value = min_value
+        self.max_value = max_value
+        
+    def __get__(self, instance, owner):
+        # Accessed on the instance (instance.attribute)
+        if instance is None:
+            return self
+        return instance.__dict__[self.name]
+        
+    def __set__(self, instance, value):
+        if self.min_value is not None and value < self.min_value:
+            raise ValueError(f"{self.name} cannot be less than {self.min_value}")
+        if self.max_value is not None and value > self.max_value:
+            raise ValueError(f"{self.name} cannot be greater than {self.max_value}")
+        instance.__dict__[self.name] = value
+
+# Usage
+class Person:
+    age = ValidatedProperty('age', min_value=0, max_value=150)
+    height = ValidatedProperty('height', min_value=0)
+    
+    def __init__(self, name, age, height):
+        self.name = name
+        self.age = age
+        self.height = height
+
+# This works
+person = Person("Alice", 30, 175)
+
+# These raise ValueError
+# person.age = -5
+# person.age = 200
+                                </code></pre>
+                            </div>
+                        </div>
+
+                        <!-- Question 10 -->
+                        <div class="language-question-card glass">
+                            <h3>10. How does Python's asyncio work?</h3>
+                            <div class="answer">
+                                <p>Asyncio is Python's standard library for writing single-threaded concurrent code using coroutines, multiplexing I/O access over sockets and other resources:</p>
+                                <ul>
+                                    <li>Introduced in Python 3.4 and significantly improved in 3.5+ with async/await syntax</li>
+                                    <li>Enables asynchronous programming without threads or multiprocessing</li>
+                                    <li>Based on an event loop that manages and distributes the execution of tasks</li>
+                                    <li>Best suited for I/O-bound and high-level structured network code</li>
+                                    <li>Not a solution for CPU-bound tasks (use multiprocessing instead)</li>
+                                </ul>
+                                <pre><code class="language-python">
+import asyncio
+import aiohttp
+import time
+
+async def fetch_url(url, session):
+    async with session.get(url) as response:
+        return await response.text()
+
+async def fetch_all(urls):
+    async with aiohttp.ClientSession() as session:
+        # Create tasks for all URLs
+        tasks = [fetch_url(url, session) for url in urls]
+        # Run them concurrently and gather results
+        results = await asyncio.gather(*tasks)
+        return results
+
+async def main():
+    urls = [
+        "https://example.com",
+        "https://google.com",
+        "https://github.com",
+        "https://python.org"
+    ]
+    start = time.time()
+    results = await fetch_all(urls)
+    print(f"Fetched {len(results)} sites in {time.time() - start:.2f} seconds")
+
+# Run the main coroutine
+if __name__ == "__main__":
+    asyncio.run(main())
+                                </code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="cta-section">
+                <div class="container">
+                    <h2>Ready to Master Python?</h2>
+                    <p>Take your programming skills to the next level with our comprehensive Python course</p>
+                    <div class="cta-buttons">
+                        <a href="courses.html" class="btn-primary">View Full Course <i class="fas fa-arrow-right"></i></a>
+                        <a href="data-structures.html" class="btn-secondary">Back to Data Structures</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>About PrepArena</h3>
+                    <p>Your one-stop platform for comprehensive preparation for coding interviews, competitive exams, and career growth.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+                        <li><a href="courses.html"><i class="fas fa-chevron-right"></i> Courses</a></li>
+                        <li><a href="free-courses.html"><i class="fas fa-chevron-right"></i> Free Courses</a></li>
+                        <li><a href="jobs.html"><i class="fas fa-chevron-right"></i> Jobs</a></li>
+                        <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> +1 234 567 8900</li>
+                        <li><i class="fas fa-envelope"></i> info@preparena.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Tech Street, Silicon Valley</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 PrepArena. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-python.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html> 
